@@ -1,11 +1,11 @@
 <?php session_start();?>
-<html>
+<html lang="en">
    <head>
       <link rel="stylesheet" href="./Assets/reset.css" />
       <link rel="stylesheet" href="./Assets/styles.css" />
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
 		<script src="./Assets/jquery.min.js"></script>
-		
+		<link rel="icon" href="./Assets/favicon.ico" />
 	</head>
    <body>
       <?php

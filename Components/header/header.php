@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
    <head>
       <style>
          div.header-container {

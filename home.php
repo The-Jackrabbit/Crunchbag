@@ -1,8 +1,9 @@
 <?php session_start();?>
-<html>
+<html lang="en">
    <head>
       <link rel="stylesheet" href="./Assets/reset.css" />
       <link rel="stylesheet" href="./Assets/styles.css" />
+		<link rel="icon" href="./Assets/favicon.ico" />
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
 		<script src="./Assets/jquery.min.js"></script>
 		<style>
@@ -16,9 +17,11 @@
 				left: 0;
 				right: 0;
 				text-align: center;
-				font-weight: lighter;
+				
 				color: white;
 				z-index: -1;
+				margin-bottom: 400pt;
+				
 			}
 			div.banner-body {
 				position: relative;
@@ -27,6 +30,7 @@
 			}
 			.banner-text-title {
 				font-size: 70pt;
+				font-weight: lighter;
 			}
 			.banner-text {
 				margin-top: 10pt;
@@ -35,6 +39,16 @@
 			}
 			span.light-italic {
 				font-style: italic;
+			}
+			.banner-padding {
+				padding-bottom: 400pt;
+			}
+			.step-description {
+				width: 60%;
+			}
+			.step {
+				background-color: white;
+				padding: 12pt;
 			}
 		</style>
 	</head>
@@ -62,8 +76,13 @@
 				<p class="banner-text">any<span class="light-italic">time</span>, any<span class="light-italic">where</span></p>
 			</div>
 		</div>
+		<div class="banner-padding"></div>
 		<div class="max-inline">
-			
+			<div class="step">
+				<p class="step-description">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
 		</div>
    </body>
 </html>
