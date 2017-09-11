@@ -1,0 +1,69 @@
+@font-face {
+	font-family: 'Open Sans';
+	src: url('./Fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('./Fonts/Open_Sans/OpenSans-Light.ttf') format('truetype');
+	font-weight: lighter;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('./Fonts/Open_Sans/OpenSans-LightItalic.ttf') format('truetype');
+	font-weight: lighter;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('./Fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype');
+	font-weight: bold ;
+	font-style: normal;
+}
+
+a, h1, h2, h3, h4, h5, h6, span, text, p, div, input, textarea, td, tr,option, select {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	font-size: 24pt;
+	font-weight: lighter;
+}
+
+.max-inline {
+   max-width: 800pt;
+   min-width: 400pt;
+	margin: 0 auto;
+	padding: 12pt;
+}
+
+body {
+	background-color: #eee;
+}
+
+input[type=button], input[type=submit] {
+	background-color:white;
+	border-radius:5pt;
+	border: none;
+	border: 1pt solid #aaa;
+	font-size: 12pt;
+	padding:3pt;
+	text-align: center;
+	width: min-content;
+}
+
+input[type=button]:active, input[type=submit]:active {
+	background-color:dodgerblue;
+	color: white;
+}
+
+
+input[type=text], input[type=date], input[type=password] {
+	border: none;
+	border: 1pt solid #aaa;
+	font-size: 12pt;
+	padding: 3pt;
+	border-radius:5pt;
+}
