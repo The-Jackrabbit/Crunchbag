@@ -11,6 +11,11 @@
 				box-shadow: 3pt 3pt 10pt gray;
 				padding: 12pt;
 				text-align: center;
+				margin: 0 auto;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%);
 			}
 			div.login-form input[type=submit] {
 				width: 100%;

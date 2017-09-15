@@ -4,12 +4,17 @@
       <link rel="stylesheet" href="./Assets/reset.css" />
       <link rel="stylesheet" href="./Assets/styles.css" />
 		<link rel="icon" href="./Assets/favicon.ico" />
+		<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">	
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">		
 		<script src="./Assets/jquery.min.js"></script>
 		<style>
 			p, a, h1, h2, h3, span, div {
+<<<<<<< HEAD
+				
+=======
 				font-family: 'Lora', serif;
+>>>>>>> origin/master
 			}
 			.banner {
 				background-image: url("./Assets/banner5.jpeg");
@@ -68,13 +73,62 @@
 			.banner-padding {
 				padding-bottom: 400pt;
 			}
+
+			.step-container {
+				width: 100%;
+				vertical-align: middle;
+			}
+			
 			.step-description {
-				width: 60%;
+				vertical-align: middle;
 			}
-			.step {
-				background-color: white;
+			.step-description p {
 				padding: 12pt;
+				background-color: white;
 			}
+			.step-graphic {
+				width: 200pt;
+			}
+			.step-graphic img {
+				width: 200pt;
+			}
+			.left-align {
+				float: left;
+			}
+			.right-align {
+				float: right;
+			}
+			table.step-table {
+				table-layout: fixed;
+			}
+
+			.transbox {
+				padding: 30px;
+				background-color: rgba(255,255,255,0.5);
+				width: min-content;
+				white-space: nowrap;
+				margin: 0 auto;
+				
+			}
+			.inner-inner-transbox {	
+				padding: 20px;
+				background-color: rgba(120,60,0,.6);
+				width: min-content;
+				white-space: nowrap;
+				border-style: double;
+				
+			}	
+			.inner-inner-transbox * {
+				font-family: 'Lora', serif !important;
+			}
+			.inner-transbox {	
+				padding: 10px;
+				background-color: rgba(120,30,0,.3);
+				width: min-content;
+				white-space: nowrap;
+				
+			}
+
 		</style>
 	</head>
    <body>
@@ -110,11 +164,51 @@
 		</div>
 		<div class="banner-padding"></div>
 		<div class="max-inline">
-			<div class="step">
-				<p class="step-description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</div>
+		<div class="step-container">
+			<table class="step-table">
+				<tr>
+					<td class="step-description"><p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p></td>
+					<td class="step-graphic">
+						<img src="./Assets/step1.png">
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="step-container">
+			<table class="step-table">
+				<tr>
+					<td class="step-graphic">
+						<img src="./Assets/step2.png">
+					</td>
+					<td class="step-description">
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</td>
+					
+				</tr>
+			</table>
+		</div>
+		<div class="step-container">
+			<table class="step-table">
+				<tr>
+				<td class="step-description">
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</td>
+					<td class="step-graphic">
+						<img src="./Assets/step3.png">
+					</td>
+					
+					
+				</tr>
+			</table>
+		</div>
+		
+
 		</div>
    </body>
 </html>

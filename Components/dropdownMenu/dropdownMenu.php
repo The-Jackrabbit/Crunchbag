@@ -1,12 +1,12 @@
 <style>
 	#dropdown-menu {
-		background-color: #D45C4C;
+		background-color: #7A1906;
 		width: 200pt;
 		height:100%;
 		z-index: 1000;
 	}
 	.head {
-		background-color: #B23323;
+		background-color: #631505;
 		height: min-content;
 		width: 100%;
 	}
