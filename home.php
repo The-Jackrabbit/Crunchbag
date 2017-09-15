@@ -5,10 +5,14 @@
       <link rel="stylesheet" href="./Assets/styles.css" />
 		<link rel="icon" href="./Assets/favicon.ico" />
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">		
 		<script src="./Assets/jquery.min.js"></script>
 		<style>
+			p, a, h1, h2, h3, span, div {
+				font-family: 'Lora', serif;
+			}
 			.banner {
-				background-image: url("./Assets/banner-bg.png");
+				background-image: url("./Assets/banner5.jpeg");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -23,10 +27,31 @@
 				margin-bottom: 400pt;
 				
 			}
+			.transbox {
+				padding: 30px;
+				background-color: rgba(255,255,255,0.5);
+				width: min-content;
+				white-space: nowrap;
+				margin: 0 auto;
+			}
+			.inner-inner-transbox {	
+				padding: 20px;
+				background-color: rgba(120,60,0,.6);
+				width: min-content;
+				white-space: nowrap;
+				border-style: double;
+			}	
+			.inner-transbox {	
+				padding: 10px;
+				background-color: rgba(120,30,0,.3);
+				width: min-content;
+				white-space: nowrap;
+			}	
 			div.banner-body {
 				position: relative;
 				top: 50%;
 				transform: translateY(-50%);
+				margin: 0 auto;
 			}
 			.banner-text-title {
 				font-size: 70pt;
@@ -71,9 +96,16 @@
          include("./Components/header/header.php");
       ?>
 		<div class="banner">
+			
 			<div class="banner-body">
-				<p class="banner-text-title">Crunchy leaves</p>
-				<p class="banner-text">any<span class="light-italic">time</span>, any<span class="light-italic">where</span></p>
+			  <div class="transbox">
+				<div class="inner-transbox">
+				  <div class="inner-inner-transbox">
+					<p class="banner-text-title">crunchy leaves</p>
+					<p class="banner-text">any<span class="light-italic">time</span>. any<span class="light-italic">where.</span></p>
+				 </div>
+				</div>
+			  </div> 
 			</div>
 		</div>
 		<div class="banner-padding"></div>
