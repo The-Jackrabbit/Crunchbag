@@ -7,6 +7,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">	
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 		<script src="./Assets/jquery.min.js"></script>
 		<style>
 			p, a, h1, h2, h3, span, div {
@@ -17,7 +18,7 @@
 >>>>>>> origin/master
 			}
 			.banner {
-				background-image: url("./Assets/banner5.jpeg");
+				background-image: url("./Assets/T_17.svg");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -32,26 +33,6 @@
 				margin-bottom: 400pt;
 				
 			}
-			.transbox {
-				padding: 30px;
-				background-color: rgba(255,255,255,0.5);
-				width: min-content;
-				white-space: nowrap;
-				margin: 0 auto;
-			}
-			.inner-inner-transbox {	
-				padding: 20px;
-				background-color: rgba(120,60,0,.6);
-				width: min-content;
-				white-space: nowrap;
-				border-style: double;
-			}	
-			.inner-transbox {	
-				padding: 10px;
-				background-color: rgba(120,30,0,.3);
-				width: min-content;
-				white-space: nowrap;
-			}	
 			div.banner-body {
 				position: relative;
 				top: 50%;
@@ -85,6 +66,8 @@
 			.step-description p {
 				padding: 12pt;
 				background-color: white;
+				border: double;
+				border-width: 20px;
 			}
 			.step-graphic {
 				width: 200pt;
@@ -128,10 +111,18 @@
 				white-space: nowrap;
 				
 			}
+			.normal-text{
+				line-height: 50px;
+				color:rgba(120,40,0,0.8);
+				text-align: center;
+				font-family: 'Raleway', sans-serif;
+				font-size: 20pt;
+			
+			}
 
 		</style>
 	</head>
-   <body>
+   <body style="background-color: rgba(120,60,0,.1);">
       <?php
          $pkg = Array(
                "title" => "BackLog",
@@ -167,8 +158,8 @@
 		<div class="step-container">
 			<table class="step-table">
 				<tr>
-					<td class="step-description"><p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<td class="step-description"><p class="normal-text">
+						High quality leaves are collected from local neighboorhood families at no charge.
 						</p></td>
 					<td class="step-graphic">
 						<img src="./Assets/step1.png">
@@ -183,8 +174,8 @@
 						<img src="./Assets/step2.png">
 					</td>
 					<td class="step-description">
-						<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<p class="normal-text">
+						Leaves are professionally dried and prepared to prevent breakdown. 
 						</p>
 					</td>
 					
@@ -195,8 +186,8 @@
 			<table class="step-table">
 				<tr>
 				<td class="step-description">
-						<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<p class="normal-text">
+						 A CrunchBag leaf bag is stuffed with dry, crisp leaves to be sent to your door step at anytime of year.
 						</p>
 					</td>
 					<td class="step-graphic">
