@@ -43,7 +43,7 @@
 						</h3>
 					</div>
 					<div class="toggle-inner">
-						<p>Answer</p>
+						<p>We collect leaves at no charge from communities all over the United States! If you have excess leaves or are looking for an alternative to standard lawn material removal services check out our curb to Crunchbag service.</p>
 					</div>
 					</div><!-- END OF TOGGLE -->
 					<div class="toggle">
@@ -68,7 +68,7 @@
 							</div>
 							
 							<div class="toggle-inner">
-								<p>Answer</p>
+								<p>At the moment we are working to perfect a few tantalizing scents bouquets look out for these new fragrances starting Spring 2018! Until then we hope you enjoy our current selections including cinnamon, nutmeg and pumpkin spice.</p>
 							</div>
 							
 							</div><!-- END OF TOGGLE -->
@@ -79,12 +79,12 @@
 							<div class="toggle-title  ">
 								<h3>
 								<i></i>
-								<span class="title-name"> Do you accept donations of leaves?</span>
+								<span class="title-name"> Do you accept donations of wet or soiled leaves?</span>
 								</h3>
 							</div>
 							
 							<div class="toggle-inner">
-								<p>Answer</p>
+								<p>Yes! In addition to our curb to Crunchbag program we utilize partially spoiled leaves as fertilizer for a few of our trees on site. Keep in mind while we do collect these leaves we do so at a reduced rate.</p>
 							</div>
 							
 							</div><!-- END OF TOGGLE -->
@@ -100,7 +100,7 @@
 							</div>
 							
 							<div class="toggle-inner">
-								<p>Answer</p>
+								<p>Our crisp joyous leaves come about as a result of a detailed process including the use of durable collection bags, a state of the art dry room, and impeccably packaged leaves using patented technology so they arrive at your door in perfect condition ready to be enjoyed.</p>
 							</div>
 							
 							</div><!-- END OF TOGGLE -->
@@ -113,7 +113,7 @@
 							</div>
 							
 							<div class="toggle-inner">
-								<p>Answer.</p>
+								<p>Unfortunately at the moment due to the fragility of each leaf and the increased potential for damage with international shipping we do not currently ship anywhere outside of North America.</p>
 							</div>
 							
 							</div><!-- END OF TOGGLE -->
@@ -121,12 +121,12 @@
 							<div class="toggle-title ">
 								<h3>
 								<i></i>
-								<span class="title-name">Are Crunchbags available in stores??</span>
+								<span class="title-name">Are Crunchbags available in stores?</span>
 								</h3>
 							</div>
 							
 							<div class="toggle-inner">
-								<p>Answer</p>
+								<p>Crunchbags are not quite ready to be seen on your favorite store’s shelf but we do hope as our business expands we will be able to work with a few retail locations to provide better access to a fun autumn adventure anytime anywhere. </p>
 							</div>
 							
 							</div><!-- END OF TOGGLE -->
