@@ -61,7 +61,56 @@
 				left: 0;
 				right: 0;
 			}
-			
+			.banner-padding {
+				padding-bottom: 200pt;
+			}
+			.entry input {
+				background-color: transparent !important;
+				border: none;
+				border-radius: 0pt;
+				border-bottom: 1pt solid #33464F;
+				width: 100%;
+				font-size: 16pt;
+				color: white !important;
+			}
+			.entry input::-webkit-input-placeholder {
+				color: #ccc !important;
+			}
+			table.signup-form {
+				width: 100%;
+			}
+			table.signup-form tr td:first-child {
+				width: 120pt;
+				font-size: 14pt;
+				color: #33464F;
+			}
+			table.signup-form tr  td {
+				vertical-align: middle;
+			}
+			table.signup-form tr {
+				height: 60pt;
+				vertical-align: middle;
+			}
+			#myFooter {
+				background-color: #49606C !important;
+			}
+			input[type=submit] {
+				width: 200pt;
+				height: 50pt;
+				background-color: #7A1906;
+				border:none;
+				color: white;
+				font-size: 18pt;
+				margin:0 auto;
+			}
+			table.signup-form td.signup {
+				margin:0 auto;
+				text-align: center;
+				
+			}
+			body {
+				background-color: #49606C;
+			}
 		</style>
 	</head>
    <body>
@@ -87,21 +136,34 @@
 			  <div class="banner-text">Login</div>
 			</div>
 		</div>
-		
+		<div class="banner-padding"></div>
 		<div class="max-inline">
 			<?php
 				if ($_GET["redirect"]) {
 					echo '<h1>you goofed, try again bozo</h1>';
 				}
 			?>
-			<div class="login-form">
-				<form action="./Helpers/submitLogin.php" method="POST">
-					<input required type="text" placeholder="username" name="username">
-					<input required type="password" placeholder="password" name="password">
-					<input type="submit" value="Log In">
-					<a href="./signup.php" class="signup-redirect">Don't have an account?</a>
-				</form>
-			</div>
+			<form action="./Helpers/submitSignup.php" method="POST" id='signup-form'>
+			<table class="signup-form">
+				<tr class="entry">
+					<td>Username:</td>
+					<td>
+						<input type="text" name="first_name" placeholder="Username">
+					</td>
+				</tr>
+				<tr class="entry">
+					<td>Password:</td>
+					<td>
+						<input type="text" name="last_name" placeholder="Password">
+					</td>
+				</tr>
+				<tr >
+					<td class="signup" colspan="2">
+						<input type="submit" value="Login">
+					</td>
+				</tr>
+			</table>
+		</form>
 			
 		</div>
 		<div class="footer">
