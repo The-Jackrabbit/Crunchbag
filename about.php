@@ -41,6 +41,8 @@
 			.step-description p {
 				padding: 12pt;
 				background-color: white;
+				font-size: 18pt;
+				line-height: 125%;
 			}
 			.step-graphic {
 				width: 150pt;
