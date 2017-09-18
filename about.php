@@ -15,20 +15,64 @@
 		<script src="./Assets/jquery.min.js"></script>
 		<style>
 			
+			.step-container {
+				vertical-align: middle;
+				background-color: #f2e8e3;
+				padding: 15px;
+				margin-bottom: 24pt;
+				background-color: white;
+				box-shadow: 4pt 4pt 4pt grey;
+			}
+			
+			.heading-container {
+				width: 30%;
+				vertical-align: middle;
+				background-color: #f2e8e3;
+				padding: 20px;
+				border-radius: 25px;
+				margin-top: 30px;
+				margin-left: 30px;
+				text-align: center;
+			}
+			
+			.step-description {
+				vertical-align: middle;
+			}
+			.step-description p {
+				padding: 12pt;
+				background-color: white;
+				border: double;
+				border-width: 15px;
+			}
+			.step-graphic {
+				width: 150pt;
+			}
+			.step-graphic img {
+				width: 150pt;
+			}
 			#mapid { 
 				display: inline-block;
-				height: 180pt;
-				width: 39%;
+				height: 200pt;
+				width: 100%;
 				vertical-align: top;
 			}
+			.text-container {
+				width: 50%;
+				height: 100%;
+				padding-right: 12pt;
+			}
 			.text {
-				width: 60%;
-				display: inline-block;
+				
+				height: 100%;
+				
+				padding: 12pt;
 			}
 			.about-info {
 				padding-bottom: 200pt;
 				vertical-align: top;
 				margin: 0 auto;
+				table-layout: fixed;
+				height: 200pt;
 			}
 			.actions input {
 				color: white;
@@ -66,6 +110,12 @@
 			}
 			.owner-signature p {
 				padding: 2pt;
+			}
+			.about-section {
+				margin-bottom: 36pt;
+				background-color: white;
+				box-shadow: 4pt 4pt 4pt grey;
+				padding: 12pt;
 			}
 		</style>
 		<script>
@@ -109,40 +159,88 @@
          include("./Components/header/header.php");
       ?>
 		<div class="max-inline">
-			<h1>About Us</h1>	
-			<hr>
-			<div class="about-info">
-				<div class="text">
-					<p>Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros. Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.  Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.</p>
-					<ul>
-						<li>List item 1</li>
-						<li>List item 2</li>
-						<li>List item 3</li>
-					</ul>
-					<p> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros. Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.</p>
-					<div class="owner-signature">
-						<p>- Kacey Price</p>
-						<p>- Gen Schmitt</p>
-						<p>- Luke Masters</p>
-					</div>
-				</div>
-				<div id="mapid">
-
-
-				</div>
-
+			<div class="about-section">
+				<h1>About Us</h1>	
+				<hr>
+				<table class="about-info">
+					<tr>
+						<td class="text-container">
+							<div class="text">
+								<p>Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros. Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.  Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.</p>
+								<ul>
+									<li>List item 1</li>
+									<li>List item 2</li>
+									<li>List item 3</li>
+								</ul>
+							</div>
+						</td>
+						<td>
+							<div id="mapid"></div>
+						</td>
+					</tr>
+				</table>
 			</div>
-			
-
+			<div class="about-sddection">
+			<h1>How Does it Work?</h1>
 			<hr>
-			<div class="actions">
-			<form action="./signup.php">
-				<input class="signup" type="submit" value="Sign Up">
-			</form>
-			<form action="./purchase.php">
-				<input class="purchase" type="submit" value="Purchase">
-			</form>
+			<div class="step-container">
+			<table class="step-table">
+				<tr>
+					<td class="step-description"><p class="normal-text">
+						High quality leaves are raked and collected from local neighboorhood families at no charge.
+						</p></td>
+					<td class="step-graphic">
+						<img src="/Assets/img/step1.png">
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="step-container">
+			<table class="step-table">
+				<tr>
+					<td class="step-graphic">
+						<img src="/Assets/img/step2.png">
+					</td>
+					<td class="step-description">
+						<p class="normal-text">
+						Leaves are professionally dried and prepared to prevent breakdown. 
+						</p>
+					</td>
+					
+				</tr>
+			</table>
+		</div>
+		<div class="step-container">
+			<table class="step-table">
+				<tr>
+				<td class="step-description">
+						<p class="normal-text">
+						 A CrunchBag leaf bag is stuffed with dry, crisp leaves to be sent to your door step at anytime of year.
+						</p>
+					</td>
+					<td class="step-graphic">
+						<img src="/Assets/img/step3.png">
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		</td>		
+		</td>
+		</table>
 
+		</div>
+		</div>
+			</div>
+
+			
+			<div class="actions">
+				<form action="./signup.php">
+					<input class="signup" type="submit" value="Sign Up">
+				</form>
+				<form action="./purchase.php">
+					<input class="purchase" type="submit" value="Purchase">
+				</form>
 			</div>
 			
 		</div>

@@ -1,37 +1,8 @@
 <style>
-	*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font: normal 16px/1.5 "Helvetica Neue", sans-serif;
-  color: #fff;
-  overflow-x: hidden;
-}  /* INTRO SECTION
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .intro {
   padding: 100px 0;
 }
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-
-/* TIMELINE
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline ul {
   padding: 50px 0;
@@ -61,15 +32,15 @@ h1 {
 .timeline ul li div {
   position: relative;
   bottom: 0;
-  width: 400px;
-  padding: 15px;
-  background: #F45B69;
+  width: 280pt;
+  padding: 12pt;
+  background: #F0AF45;
 }
 
 .timeline ul li div::before {
   content: '';
   position: absolute;
-  bottom: 7px;
+  bottom: 7pt;
   width: 0;
   height: 0;
   border-style: solid;
@@ -82,7 +53,7 @@ h1 {
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent #F45B69 transparent transparent;
+  border-color: transparent #F0AF45 transparent transparent;
 }
 
 .timeline ul li:nth-child(even) div {
@@ -92,7 +63,7 @@ h1 {
 .timeline ul li:nth-child(even) div::before {
   right: -15px;
   border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent #F45B69;
+  border-color: transparent transparent transparent #F0AF45;
 }
 
 time {
@@ -102,16 +73,12 @@ time {
   margin-bottom: 8px;
 }
 
-
-/* EFFECTS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .timeline ul li::after {
   transition: background .5s ease-in-out;
 }
 
 .timeline ul li.in-view::after {
-  background: #F45B69;
+  background: #F0AF45;
 }
 
 .timeline ul li div {
@@ -134,9 +101,6 @@ time {
   opacity: 1;
 }
 
-
-/* GENERAL MEDIA QUERIES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 @media screen and (max-width: 900px) {
   .timeline ul li div {
@@ -161,7 +125,7 @@ time {
   .timeline ul li:nth-child(even) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent #F45B69 transparent transparent;
+    border-color: transparent #F0AF45 transparent transparent;
   }
 }
 </style>
@@ -199,8 +163,8 @@ time {
   window.addEventListener("resize", callbackFunc);
   window.addEventListener("scroll", callbackFunc);
 
-})();
-	})
+	})();
+})
 	
 </script>
 
@@ -208,7 +172,7 @@ time {
   <ul>
     <li>
       <div>
-        <time>1934</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+        <time>Day 1</time> Customize and place your order on Crunchbag.com
       </div>
     </li>
     <li>
@@ -219,51 +183,6 @@ time {
     <li>
       <div>
         <time>1940</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>1943</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>1946</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>1956</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>1957</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>1967</time> Aenean condimentum odio a bibendum rhoncus. Ut mauris felis, volutpat eget porta faucibus, euismod quis ante.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>1977</time> Vestibulum porttitor lorem sed pharetra dignissim. Nulla maximus, dui a tristique iaculis, quam dolor convallis enim, non dignissim ligula ipsum a turpis.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>1985</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>2000</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-      </div>
-    </li>
-    <li>
-      <div>
-        <time>2005</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
       </div>
     </li>
   </ul>

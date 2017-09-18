@@ -88,10 +88,9 @@
 				margin: 10px;
 			}
 			.card-text{
-				line-height: 25px; 
+				line-height: 18pt; 
 				color: #4f4541;
-				font-family: 'Roboto', sans-serif;
-				text-align: "left";
+				text-align: start;
 			}
 			
 			ul.leaf {
@@ -100,7 +99,6 @@
 			}
 			ul.leaf li {
 				margin: 8pt; 
-				text-indent: -8pt;
 			}
 			.actions input {
 				color: white;
@@ -122,6 +120,7 @@
 			div.definition {
 				background-color: white;
 				padding: 24pt 12pt;
+				padding-top: 6pt;
 				width: 86%;
 				margin: 0 auto;
 				box-shadow: 4pt 4pt 4pt grey;
@@ -140,7 +139,7 @@
 				transform: translateY(6pt);
 			}
 			table.definition tr {
-				height: 50pt;
+				height: 30pt;
 			}
 			.crunchbag {
 				font-family: 'Lora', serif;
@@ -154,7 +153,7 @@
 		</style>
 
 	</head>
-   <body style="background-color: #e0d2cc;">
+   <body style="">
       <?php
          $pkg = Array(
                "title" => "CrunchBag",
@@ -230,7 +229,7 @@
 					<div class="info-text">
 						<h1>Preparation</h1>
 						<ul class= "leaf">
-							<li><p class="card-text">Is autumn rainy in your area this year? Our leaves are professionally dried and prepared to prevent organic breakdown and ensure optimal frollic readiness. </p> </p></li>
+							<li class="card-text">Is autumn rainy in your area this year? Our leaves are professionally dried and prepared to prevent organic breakdown and ensure optimal frollic readiness.</li>
 							<li><p class="card-text">Are leaves not quite enough to get that cozy autumnal feeling? Choose from three festive scents of potpourri to add to your pile of leaves!</p> </li>
 						</ul>
 				</div>
