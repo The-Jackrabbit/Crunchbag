@@ -12,11 +12,7 @@
 		<script src="./Assets/jquery.min.js"></script>
 		<style>
 			p, a, h1, h2, h3, span, div {
-<<<<<<< HEAD
-				
-=======
 				font-family: 'Lora', serif;
->>>>>>> origin/master
 			}
 			.banner {
 				background-image: url("./Assets/banner5.jpeg");
@@ -864,24 +860,7 @@
 		</div>
 		</div>
 		-->
-		
-		
-    <footer id="myFooter">
-        <div class="container">
-            <ul>
-                <li><a href="#">Company Information</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Terms of service</a></li>
-            </ul>
-        <p class="footer-copyright">© 2017 CrunchBag</p>
-        </div>
-        <div class="footer-social">
-            <a href="#" class="social-icons"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="social-icons"><i class="fa fa-google-plus"></i></a>
-            <a href="#" class="social-icons"><i class="fa fa-twitter"></i></a>
-        </div>
-    </footer>
+		<?php include("./Components/footer/footer.php");?>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		
