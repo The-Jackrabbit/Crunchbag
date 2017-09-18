@@ -19,7 +19,7 @@
 			}
 			div.login-form input[type=submit] {
 				width: 100%;
-				background-color: dodgerblue;
+				background-color: #7A1906;
 				color: white;
 			}
 			div.login-form input {
