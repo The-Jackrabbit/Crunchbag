@@ -8,6 +8,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<script src="./Assets/jquery.min.js"></script>
 		<style>
 			p, a, h1, h2, h3, span, div {
@@ -125,7 +126,7 @@
 			.home-info-card {
 				background-color: white;
 				box-shadow: 4pt 4pt 4pt grey;
-				width: 180pt;
+				width: 190pt;
 				padding: 12pt;
 				display: inline-block;
 				margin: 12pt;
@@ -140,6 +141,19 @@
 			.cards {
 				margin: 0 auto;
 				text-align: center;
+			}
+			li.home-info-card {
+				margin: 10px;
+			}
+			.card-text{
+				line-height: 25px; 
+				color: #4f4541;
+				font-family: 'Roboto', sans-serif;
+				text-align: "left";
+			}
+			
+			ul.leaf {
+				list-style-image: url('/Assets/leafbullet.png');
 			}
 		</style>
 
@@ -183,8 +197,12 @@
 						<img src="./Assets/leaf-pentagon.png">
 					</div>
 					<div class="info-text">
-						<h1>Lorem</h1>
-						<p>Lorem ipsum dolem nonagon infinity opens the door Lorem ipsum dolem nonagon infinity opens the door Lorem ipsum dolem nonagon infinity opens the door</p>
+						<h1 style= "font-weight: bold; padding: 20px; color: #4f4541; ">Collection</h1>
+						<ul class="leaf">
+							<li style="margin: 10px; text-indent: -10px;"><p class="card-text">High quality leaves are raked and collected from local neighboorhood families. </p> </li>
+							<li style="margin: 10px; text-indent: -10px;"><p class="card-text">Leaf raking and collection comes to no cost to the family or orgnaization. </p> </li>
+							<li style="margin: 10px; text-indent: -10px;"><p class="card-text">Already have your leaves raked and ready to go? We donate 20% of proceeds to local charities for pre-collected leaves.</p> </p> </li>
+						</ul>
 					</div>
 				</div>
 				<div class="home-info-card">
@@ -192,17 +210,23 @@
 						<img src="./Assets/truck-pentagon.png">
 					</div>
 					<div class="info-text">
-						<h1>Lorem</h1>
-						<p>Lorem ipsum dolem nonagon infinity opens the door Lorem ipsum dolem nonagon infinity opens the door Lorem ipsum dolem nonagon infinity opens the door</p>
-					</div>
+						<h1 style= "font-weight: bold; padding: 20px; color: #4f4541; ">Preparation</h1>
+						<ul class= "leaf">
+							<li style="margin: 10px; text-indent: -10px;"><p class="card-text">Is autumn rainy in your area this year? Our leaves are professionally dried and prepared to prevent organic breakdown and ensure optimal frollic readiness. </p> </p></li>
+							<li style="margin: 10px; text-indent: -10px;"><p class="card-text">Are leaves not quite enough to get that cozy autumnal feeling? Choose from three festive scents of potpourri to add to your pile of leaves!</p> </li>
+						</ul>
+				</div>
 				</div>
 				<div class="home-info-card">
 					<div class="info-icon">
 						<img src="./Assets/box-pentagon.png">
 					</div>
 					<div class="info-text">
-						<h1>Lorem</h1>
-						<p>Lorem ipsum dolem nonagon infinity opens the door Lorem ipsum dolem nonagon infinity opens the door Lorem ipsum dolem nonagon infinity opens the door</p>
+						<h1 style= "font-weight: bold; padding: 20px; color: #4f4541; ">Autumn: </br> <span style= "font-weight:normal; font-size: 25px; font-style: italic;">only a few clicks away... </span></h1>
+						<ul class= "leaf">
+							<li style="margin: 10px; text-indent: -10px;"><p class="card-text">A <span style= "font-family: 'Lora', serif; font-weight: bold;">CrunchBag</span> leaf bag is stuffed with dry, crisp leaves to be sent to your door step at anytime of year.</p> </li>
+							<li style="margin: 10px; text-indent: -10px;"><p class="card-text"> Recieve your <span style= "font-family: 'Lora', serif; font-weight: bold;">CrunchBag</span> bag and enjoy the autumn feels.</p></li>
+						</ul>		
 					</div>
 				</div>
 
