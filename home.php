@@ -141,7 +141,6 @@
 			table.definition tr {
 				height: 50pt;
 			}
-<<<<<<< HEAD
 			.crunchbag {
 				font-family: 'Lora', serif;
 				font-weight: bold;
@@ -151,9 +150,6 @@
 				padding:14pt; 
 				color: #4f4541; 
 			}
-=======
-		
->>>>>>> origin/master
 		</style>
 
 	</head>
@@ -245,18 +241,10 @@
 					<div class="info-text">
 						<h1>Autumn</h1>
 						<ul class= "leaf">
-<<<<<<< HEAD
 							<li><p class="card-text">A <span class="crunchbag">CrunchBag</span> leaf bag is stuffed with dry, crisp leaves to be sent to your door step at anytime of year.</p> </li>
 							<li><p class="card-text"> Recieve your <span class="crunchbag">CrunchBag</span> bag and enjoy the autumn feels.</p></li>
 							<li><p class="card-text"> With <span class="crunchbag">CrunchBag</span>, autumn is only a few clicks away... </p></li>	
 						</ul>
-=======
-							<li style="margin: 10px; text-indent: -10px;"><p class="card-text">A <span style= "font-family: 'Lora', serif; font-weight: bold;">CrunchBag</span> leaf bag is stuffed with dry, crisp leaves to be sent to your door step at anytime of year.</p> </li>
-							<li style="margin: 10px; text-indent: -10px;"><p class="card-text"> Recieve your <span style= "font-family: 'Lora', serif; font-weight: bold;">CrunchBag</span> bag and enjoy the autumn feels.</p></li>
-							<img style= "margin-top:20pt;" src="Assets/leaves.png" alt= leaves>
-						</ul>		
-
->>>>>>> origin/master
 					</div>
 				</div>
 
