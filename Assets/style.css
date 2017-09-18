@@ -74,7 +74,6 @@ p {
 }
 .toggle .toggle-title i {
   position: absolute;
-
   width: 24px;
   height: 24px;
   -webkit-transition: all 0.3s ease;

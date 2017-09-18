@@ -30,115 +30,112 @@
          include("./Components/header/header.php");
       ?>
 	<div class="max-inline"> 
-  <div class='products-container'>
+		<div class='products-container'>
+			<div class='shop-card' data-cat='Amazon'>
+				<div class="title">
+				Individual Pile
+				</div>
+				<div class="desc">
+				</div>
+				<div class="product">
+					<img src= "./Assets/purLeaf.jpg" />
+				</div>
+				<div class='cta'>
+				<div class="price">$50.00</div>
+				<button class="button">Add to cart</button>
+				</div>
+			</div>
 
-    <div class='shop-card' data-cat='Amazon'>
-      <div class="title">
-        Individual Pile
-      </div>
-      <div class="desc">
-      </div>
-      <div class="product">
-         <img src= "./Assets/purLeaf.jpg" />
-      </div>
-      <div class='cta'>
-        <div class="price">$50.00</div>
-        <button class="button">Add to cart</button>
-      </div>
-    </div>
+			<div class='shop-card' data-cat='Amazon'>
+				<div class="title">
+				Couple's Pile
+				</div>
+				<div class="desc">
+					
+				</div>
+				<div class="product">
+					<img src= "./Assets/purLeaf.jpg" />
+				</div>
+				<div class='cta'>
+				<div class="price">$80.00</div>
+				<button class="button">Add to cart</button>
+				</div>
+			</div>
 
-    <div class='shop-card' data-cat='Amazon'>
-      <div class="title">
-        Couple's Pile
-      </div>
-      <div class="desc">
-         
-      </div>
-      <div class="product">
-         <img src= "./Assets/purLeaf.jpg" />
-      </div>
-      <div class='cta'>
-        <div class="price">$80.00</div>
-        <button class="button">Add to cart</button>
-      </div>
-    </div>
+			<div class='shop-card' data-cat='Lenovo'>
+				<div class="title">
+				Family Pile
+				</div>
+				<div class="desc">
+				</div>
+				<div class="product">
+					<img src= "./Assets/purLeaf.jpg" />
+				</div>
+				<div class='cta'>
+				<div class="price">$150.00</div>
+				<button class="button">Add to cart</button>
+				</div>
+			</div>
+			
+			<div class='shop-card' data-cat='Amazon'>
+				<div class="title">
+				Cinnamon
+				</div>
+				<div class="desc">
+				Optional Scent
+				</div>
+				<div class="product">
+					<img src= "./Assets/Cinn.jpg" />
+				</div>
+				<div class='cta'>
+				<div class="price">$25.00</div>
+				<button class="button">Add to cart</button>
+				</div>
+			</div>
+			
+			<div class='shop-card' data-cat='Lenovo'>
+				<div class="title">
+				Chai
+				</div>
+				<div class="desc">
+				Optional Scent
+				</div>
+				<div class="product">
+					<img src= "./Assets/Chai.jpg" />
+				</div>
+				<div class='cta'>
+				<div class="price">$25.00</div>
+				<button class="button">Add to cart</button>
+				</div>
+			</div>
+			
+			<div class='shop-card'>
+				<div class="title">
+				Pumpkin Spice
+				</div>
+				<div class="desc">
+				Optional Scent
+				</div>
+				<div class="product">
+					<img src= "./Assets/PSL.jpg" />
+				</div>
+				<div class='cta'>
+				<div class="price">$25.00</div>
+				<button class="button">Add to cart</button>
+				</div>
+			</div>
+			
+		</div>
 
-    <div class='shop-card' data-cat='Lenovo'>
-      <div class="title">
-        Family Pile
-      </div>
-      <div class="desc">
-      </div>
-      <div class="product">
-         <img src= "./Assets/purLeaf.jpg" />
-      </div>
-      <div class='cta'>
-        <div class="price">$150.00</div>
-        <button class="button">Add to cart</button>
-      </div>
-    </div>
-    
-    <div class='shop-card' data-cat='Amazon'>
-      <div class="title">
-        Cinnamon
-      </div>
-      <div class="desc">
-        Optional Scent
-      </div>
-      <div class="product">
-         <img src= "./Assets/Cinn.jpg" />
-      </div>
-      <div class='cta'>
-        <div class="price">$25.00</div>
-        <button class="button">Add to cart</button>
-      </div>
-    </div>
-    
-    <div class='shop-card' data-cat='Lenovo'>
-      <div class="title">
-        Chai
-      </div>
-      <div class="desc">
-        Optional Scent
-      </div>
-      <div class="product">
-         <img src= "./Assets/Chai.jpg" />
-      </div>
-      <div class='cta'>
-        <div class="price">$25.00</div>
-        <button class="button">Add to cart</button>
-      </div>
-    </div>
-    
-    <div class='shop-card'>
-      <div class="title">
-        Pumpkin Spice
-      </div>
-      <div class="desc">
-        Optional Scent
-      </div>
-      <div class="product">
-         <img src= "./Assets/PSL.jpg" />
-      </div>
-      <div class='cta'>
-        <div class="price">$25.00</div>
-        <button class="button">Add to cart</button>
-      </div>
-    </div>
-    
-  </div>
-</div>
-
-<div class='modal'>
-  <div>asdasdas asd as </div>
-  <div>asdasdas asd as </div>
-  <div>asdasdas asd as </div>
-  <div>asdasdas asd as </div>
-</div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-
-    <script  src="js/index.js"></script>
-</div>
+		<div class='modal'>
+			<div>asdasdas asd as </div>
+			<div>asdasdas asd as </div>
+			<div>asdasdas asd as </div>
+			<div>asdasdas asd as </div>
+		</div>
+  		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+   	<script  src="js/index.js"></script>
 	</div>
+	<?php include("./Components/footer/footer.php");?>
    </body>
 </html>
