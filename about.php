@@ -175,7 +175,7 @@
 								<p style="line-height: 20pt;">	In Spring 2016 we found ourselves surrounded by lush green trees all around the University of Virginia Campus, a gorgeous site to see but a depressing moment for those of us who thrive off of the sound of leaves crunching under our feet with each step we take.  From this moment on we were dedicated to delivering crisp dry leaves to anyone, everywhere, at anytime. </p>
 								<ul class="leaf">
 									<li>Customers can rest assured they are jumping into a plush pile of leaves free from sticks, debris and harmful insects.</li>
-									<li>We pride ourselves on being the only leaf pile delivery system currently operating in the United States. </li>
+									<li>We pride ourselves on being the only leaf pile delivery service currently operating in the United States. </li>
 									<li>Mother Nature may charge less, but no one else incorporates enhanced scents, guaranteed availability any time of year or the quality assurance of knowing exactly what is in the leaf pile in which you love jumping. </li>
 								</ul>
 							</div>
