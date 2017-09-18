@@ -12,8 +12,8 @@
 				padding: 12pt;
 				text-align: center;
 				margin: 0 auto;
-				position: fixed;
-				top: 50%;
+				position: absolute;
+				top: 60%;
 				left: 50%;
 				transform: translateY(-50%) translateX(-50%);
 			}
@@ -37,6 +37,40 @@
 			rect, path {
 				fill: white;
 			}
+			.login-banner {
+				background-image: url("/Assets/T_22.svg");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				height:200pt;
+				position: absolute;
+				left: 0;
+				right: 0;
+				text-align: center;
+				color: white;
+				z-index: -1;
+				margin-bottom: 400pt;			
+			}
+			div.login-banner-body {
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+				margin: 0 auto;
+			}
+			.banner-text-title {
+				font-size: 70pt;
+				font-weight: lighter;
+			}
+			.banner-text {
+				margin-top: 10pt;
+				font-size: 48pt;
+			}
+			.footer {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+			}
 		</style>
 	</head>
    <body>
@@ -56,17 +90,67 @@
 					)
             );
          include("./Components/header/header.php");
-      ?>
+		?>
+		<div class="login-banner">	
+			<div class="login-banner-body">
+			  <div class="banner-text">Sign Up</div>
+			</div>
+		</div>
+		
 		<div class="max-inline">
 			<div class="login-form">
 				
 				<form action="./Helpers/submitSignup.php" method="POST" id='signup-form'>
-					<input type="text" placeholder="First Name" name="firstName">
-					<input type="text" placeholder="Last Name" name="lastName">
-					<input type="text" placeholder="Email" name="email" id="email">
-					<input type="text" placeholder="Username" name="username" id="username">
+					<table>
+						<tr>
+							<td>
+								First Name
+							</td>
+							<td>
+								<input type="text" placeholder="First Name" name="firstName">
+							</td>
+						</tr>
+						<tr>
+						<td>
+							Last Name
+						</td>
+						<td>
+							<input type="text" placeholder="Last Name" name="lastName">
+						</td>
+						</tr>
+						<tr>
+							<td>
+								Email
+							</td>
+							<td>
+							<input type="text" placeholder="Email" name="email" id="email">
+							</td>
+						</tr>
+						<tr>
+						<td>
+							Username
+						</td>
+						<td>
+						<input type="text" placeholder="Username" name="username" id="username">
+						</td>
+					</tr>
+					<tr>
+					<td>
+					Password
+					</td>
+					<td>
 					<input required type="password" placeholder="Password" name="password" id="password">
-					<input required type="password" placeholder="Confirm Password" id="password-confirmation">
+					</td>
+				</tr>
+				<tr>
+							<td>
+							Confirm Password
+							</td>
+							<td>
+							<input required type="password" placeholder="Confirm Password" id="password-confirmation">
+							</td>
+						</tr>
+					</table>
 					<input type="submit" value="Sign Up">
 				</form>
 			</div>
@@ -95,5 +179,8 @@
 			?>
 			
 		</script>
+		<div class="footer">
+			<?php include("./Components/footer/footer.php");?>
+		</div>
    </body>
 </html>
