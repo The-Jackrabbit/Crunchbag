@@ -118,6 +118,11 @@
 				box-shadow: 4pt 4pt 4pt grey;
 				padding: 12pt;
 			}
+			ul.leaf {
+				list-style-image: url('/Assets/img/leafbullet.png');
+				padding-left: 5pt;
+				line-height: 20px;
+			}
 		</style>
 		<script>
 			$(document).ready(function() {
@@ -167,11 +172,11 @@
 					<tr>
 						<td class="text-container">
 							<div class="text">
-								<p>Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros. Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.  Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.</p>
-								<ul>
-									<li>List item 1</li>
-									<li>List item 2</li>
-									<li>List item 3</li>
+								<p style="line-height: 20pt;">	In Spring 2016 we found ourselves surrounded by lush green trees all around the University of Virginia Campus, a gorgeous site to see but a depressing moment for those of us who thrive off of the sound of leaves crunching under our feet with each step we take.  From this moment on we were dedicated to delivering crisp dry leaves to anyone, everywhere, at anytime. </p>
+								<ul class="leaf">
+									<li>Customers can rest assured they are jumping into a plush pile of leaves free from sticks, debris and harmful insects.</li>
+									<li>We pride ourselves on being the only leaf pile delivery system currently operating in the United States. </li>
+									<li>Mother Nature may charge less, but no one else incorporates enhanced scents, guaranteed availability any time of year or the quality assurance of knowing exactly what is in the leaf pile in which you love jumping. </li>
 								</ul>
 							</div>
 						</td>
