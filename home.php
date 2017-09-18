@@ -194,6 +194,7 @@
 			table.definition tr {
 				height: 50pt;
 			}
+		
 		</style>
 
 	</head>
@@ -230,16 +231,24 @@
 		<div class="banner-padding"></div>
 		<div class="max-inline">
 			<div class="definition">
-				<h1>Definition of CrunchBag</h1>
-				<h3><span>plural</span> CrunchyBois</h3>
+				<h1>Definition: <img src="./Assets/s-logo.png"></h1>
+				<h3><span style= "font-style: italic;" >plural</span> CrunchyBois</h3>
 				<table class="definition">
 					<tr>
 						<td class="enumeration">1</td>
-						<td class="definition">noun: a dope bag of good smelly crunchy ass leaves that you can jump into, spread around your home, eat (though we don't recommend it), or do with whatever your heart desires idk man they're your leaves now </td>
+						<td class="definition"><span style= "font-style: italic;" >noun:</span> a local Charlottesville, Virginia service that rakes, collects, prepares, and delivers high-quality, crisp leaves around the world to allow everyone to enjoy those autumn feels </td>
 					</tr>
 					<tr>
 						<td class="enumeration">2</td>
-						<td class="definition">noun: a bag that emulates that sweet sound of crunchy leaves when cronched </td>
+						<td class="definition"><span style= "font-style: italic;" >noun:</span> our delivery parcel; a bag full of sweet, dry leaves </td>
+					</tr>
+					<tr>
+						<td class="enumeration">3</td>
+						<td class="definition"><span style= "font-style: italic;" >adjective:</span> a way to describe high quality leaves </td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="definition"><span style= "font-style: italic;" >example sentence:</span>  "Wow Tom, those squishy leaves aren't CrunchBag at all. We should just order a CrunchBag of leaves from CrunchBag, where they are guaranteed to be CrunchBag. </td>
 					</tr>
 				</table>
 			</div>
@@ -279,8 +288,7 @@
 						<ul class= "leaf">
 							<li style="margin: 10px; text-indent: -10px;"><p class="card-text">A <span style= "font-family: 'Lora', serif; font-weight: bold;">CrunchBag</span> leaf bag is stuffed with dry, crisp leaves to be sent to your door step at anytime of year.</p> </li>
 							<li style="margin: 10px; text-indent: -10px;"><p class="card-text"> Recieve your <span style= "font-family: 'Lora', serif; font-weight: bold;">CrunchBag</span> bag and enjoy the autumn feels.</p></li>
-							<li style="margin: 10px; text-indent: -10px;"><p class="card-text"> With CrunchBag, autumn is only a few clicks away... </p></li>
-							
+							<img style= "margin-top:20pt;" src="Assets/leaves.png" alt= leaves>
 						</ul>		
 
 					</div>
@@ -289,11 +297,11 @@
 			</div>
 
 			<div class="actions">
-				<form action="./signup.php">
-					<input class="signup" type="submit" value="Get Started">
+				<form action="./about.php">
+					<input class="about" type="submit" value="Learn More">
 				</form>
 				<form action="./purchase.php">
-					<input class="purchase" type="submit" value="Learn More">
+					<input class="purchase" type="submit" value="Get Started">
 				</form>
 			</div>
 			
