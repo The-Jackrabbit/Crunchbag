@@ -9,7 +9,11 @@
 		<script src="./Assets/purchase.js"></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js '></script>
 		<link rel="icon" href="./Assets/favicon.ico" />
-		
+		<style>
+			.products-container {
+				min-height: 75vh !important;
+			}
+		</style>
 	</head>
    <body>
       <?php

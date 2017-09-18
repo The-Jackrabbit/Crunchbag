@@ -41,8 +41,6 @@
 			.step-description p {
 				padding: 12pt;
 				background-color: white;
-				border: double;
-				border-width: 15px;
 			}
 			.step-graphic {
 				width: 150pt;
@@ -81,6 +79,7 @@
 				height: 50pt;
 				margin: 12pt;
 				font-size: 18pt;
+				background-color: #7A1906 !important;
 			}
 			.actions {
 				width: min-content;
@@ -186,7 +185,7 @@
 			<div class="step-container">
 			<table class="step-table">
 				<tr>
-					<td class="step-description"><p class="normal-text">
+					<td class="step-description"><p >
 						High quality leaves are raked and collected from local neighboorhood families at no charge.
 						</p></td>
 					<td class="step-graphic">
@@ -202,7 +201,7 @@
 						<img src="/Assets/img/step2.png">
 					</td>
 					<td class="step-description">
-						<p class="normal-text">
+						<p >
 						Leaves are professionally dried and prepared to prevent breakdown. 
 						</p>
 					</td>
@@ -214,7 +213,7 @@
 			<table class="step-table">
 				<tr>
 				<td class="step-description">
-						<p class="normal-text">
+						<p >
 						 A CrunchBag leaf bag is stuffed with dry, crisp leaves to be sent to your door step at anytime of year.
 						</p>
 					</td>
