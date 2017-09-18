@@ -26,11 +26,11 @@
 		border-radius: 15pt;
 		width: 30pt;
 		height: 30pt;
-		background-color: #7A1906 !important;
+		background-color: #7A1906;
 		margin: 0pt 10pt;
 	}
 	.contact-container a {
-		color:  #7A1906 !important;
+		color:  #7A1906 ;
 		margin: 2pt 4pt;
 	}
 	.contact-container  {

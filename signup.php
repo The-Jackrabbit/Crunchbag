@@ -25,11 +25,7 @@
 			div.login-form input {
 				margin: 4pt 0pt;
 			}
-			div.login-form input[type=text], div.login-form input[type=password] {
-				margin: 4pt 0pt;
-				height: 30pt;
-				width: 200pt;
-			}
+			
 			a.signup-redirect {
 				font-size: 7pt;
 				
@@ -71,10 +67,46 @@
 				left: 0;
 				right: 0;
 			}
+			body {
+				background-color: #FBC06F !important;
+			}
+			.banner-padding {
+				padding-bottom: 200pt;
+			}
+			.entry input {
+				background-color: transparent !important;
+				border: none;
+				border-radius: 0pt;
+				border-bottom: 1pt solid #843F13;
+				width: 100%;
+				font-size: 16pt;
+				color: white !important;
+			}
+			.entry input::-webkit-input-placeholder {
+				color: #DF7A00 !important;
+			}
+			table.signup-form {
+				width: 100%;
+			}
+			table.signup-form tr td:first-child {
+				width: 120pt;
+				font-size: 14pt;
+				color: #843F13;
+			}
+			table.signup-form tr  td {
+				vertical-align: middle;
+			}
+			table.signup-form tr {
+				height: 60pt;
+				vertical-align: middle;
+			}
+			#myFooter {
+				background-color: #FBC06F  !important;
+			}
 		</style>
 	</head>
    <body>
-	<?php
+		<?php
          $pkg = Array(
                "title" => "CrunchBag",
 					"title_url" => "home.php",
@@ -96,64 +128,48 @@
 			  <div class="banner-text">Sign Up</div>
 			</div>
 		</div>
-		
+		<div class="banner-padding"></div>
 		<div class="max-inline">
-			<div class="login-form">
-				
-				<form action="./Helpers/submitSignup.php" method="POST" id='signup-form'>
-					<table>
-						<tr>
-							<td>
-								First Name
-							</td>
-							<td>
-								<input type="text" placeholder="First Name" name="firstName">
-							</td>
-						</tr>
-						<tr>
+			<form action="./Helpers/submitSignup.php" method="POST" id='signup-form'>
+				<table class="signup-form">
+					<tr class="entry">
+						<td>First Name:</td>
 						<td>
-							Last Name
-						</td>
-						<td>
-							<input type="text" placeholder="Last Name" name="lastName">
-						</td>
-						</tr>
-						<tr>
-							<td>
-								Email
-							</td>
-							<td>
-							<input type="text" placeholder="Email" name="email" id="email">
-							</td>
-						</tr>
-						<tr>
-						<td>
-							Username
-						</td>
-						<td>
-						<input type="text" placeholder="Username" name="username" id="username">
+							<input type="text" name="first_name" placeholder="First Name">
 						</td>
 					</tr>
-					<tr>
-					<td>
-					Password
-					</td>
-					<td>
-					<input required type="password" placeholder="Password" name="password" id="password">
-					</td>
-				</tr>
-				<tr>
-							<td>
-							Confirm Password
-							</td>
-							<td>
-							<input required type="password" placeholder="Confirm Password" id="password-confirmation">
-							</td>
-						</tr>
-					</table>
-					<input type="submit" value="Sign Up">
-				</form>
-			</div>
+					<tr class="entry">
+						<td>Last Name:</td>
+						<td>
+							<input type="text" name="first_name" placeholder="Last Name">
+						</td>
+					</tr>
+					<tr class="entry">
+						<td>Username:</td>
+						<td>
+							<input type="text" name="first_name" placeholder="Username">
+						</td>
+					</tr>
+					<tr class="entry">
+						<td>Email:</td>
+						<td>
+							<input type="text" name="first_name" placeholder="Email">
+						</td>
+					</tr>
+					<tr class="entry">
+						<td>Password:</td>
+						<td>
+							<input type="password" name="first_name" placeholder="Password">
+						</td>
+					</tr>
+					<tr class="entry">
+						<td>Confirm Password:</td>
+						<td>
+							<input type="password" name="first_name" placeholder="Confirm Password">
+						</td>
+					</tr>
+				</table>
+			</form>
 		</div>
 		<script>
 			$("#signup-form").submit(function() {
