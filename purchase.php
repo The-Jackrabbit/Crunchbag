@@ -42,7 +42,7 @@
          <img src= "./Assets/purLeaf.jpg" />
       </div>
       <div class='cta'>
-        <div class="price">$130</div>
+        <div class="price">$50.00</div>
         <button class="button">Add to cart</button>
       </div>
     </div>
@@ -58,7 +58,7 @@
          <img src= "./Assets/purLeaf.jpg" />
       </div>
       <div class='cta'>
-        <div class="price">$220</div>
+        <div class="price">$80.00</div>
         <button class="button">Add to cart</button>
       </div>
     </div>
@@ -73,7 +73,7 @@
          <img src= "./Assets/purLeaf.jpg" />
       </div>
       <div class='cta'>
-        <div class="price">$90</div>
+        <div class="price">$150.00</div>
         <button class="button">Add to cart</button>
       </div>
     </div>
@@ -89,7 +89,7 @@
          <img src= "./Assets/Cinn.jpg" />
       </div>
       <div class='cta'>
-        <div class="price">$220</div>
+        <div class="price">$25.00</div>
         <button class="button">Add to cart</button>
       </div>
     </div>
@@ -105,7 +105,7 @@
          <img src= "./Assets/Chai.jpg" />
       </div>
       <div class='cta'>
-        <div class="price">$220</div>
+        <div class="price">$25.00</div>
         <button class="button">Add to cart</button>
       </div>
     </div>
@@ -121,7 +121,7 @@
          <img src= "./Assets/PSL.jpg" />
       </div>
       <div class='cta'>
-        <div class="price">$220</div>
+        <div class="price">$25.00</div>
         <button class="button">Add to cart</button>
       </div>
     </div>
