@@ -17,11 +17,6 @@
 				left: 50%;
 				transform: translateY(-50%) translateX(-50%);
 			}
-			div.login-form input[type=submit] {
-				width: 100%;
-				background-color: #7A1906;
-				color: white;
-			}
 			div.login-form input {
 				margin: 4pt 0pt;
 			}
@@ -61,12 +56,6 @@
 				margin-top: 10pt;
 				font-size: 48pt;
 			}
-			.footer {
-				position: absolute;
-				top: 100%;
-				left: 0;
-				right: 0;
-			}
 			body {
 				background-color: #FBC06F !important;
 			}
@@ -102,6 +91,20 @@
 			}
 			#myFooter {
 				background-color: #FBC06F  !important;
+			}
+			input[type=submit] {
+				width: 200pt;
+				height: 50pt;
+				background-color: #7A1906;
+				border:none;
+				color: white;
+				font-size: 18pt;
+				margin:0 auto;
+			}
+			table.signup-form td.signup {
+				margin:0 auto;
+				text-align: center;
+				
 			}
 		</style>
 	</head>
@@ -141,31 +144,36 @@
 					<tr class="entry">
 						<td>Last Name:</td>
 						<td>
-							<input type="text" name="first_name" placeholder="Last Name">
+							<input type="text" name="last_name" placeholder="Last Name">
 						</td>
 					</tr>
 					<tr class="entry">
 						<td>Username:</td>
 						<td>
-							<input type="text" name="first_name" placeholder="Username">
+							<input type="text" name="username" placeholder="Username">
 						</td>
 					</tr>
 					<tr class="entry">
 						<td>Email:</td>
 						<td>
-							<input type="text" name="first_name" placeholder="Email">
+							<input type="text" name="email" placeholder="Email">
 						</td>
 					</tr>
 					<tr class="entry">
 						<td>Password:</td>
 						<td>
-							<input type="password" name="first_name" placeholder="Password">
+							<input type="password" name="password" placeholder="Password">
 						</td>
 					</tr>
 					<tr class="entry">
 						<td>Confirm Password:</td>
 						<td>
-							<input type="password" name="first_name" placeholder="Confirm Password">
+							<input type="password" name="confirm_password" placeholder="Confirm Password">
+						</td>
+					</tr>
+					<tr >
+						<td class="signup" colspan="2">
+							<input type="submit" value="Sign Up">
 						</td>
 					</tr>
 				</table>
