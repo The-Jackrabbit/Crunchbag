@@ -60,6 +60,13 @@
 			.text ul li {
 				padding: 4pt;
 			}
+			.owner-signature {
+				margin: 15pt;
+				float: right;
+			}
+			.owner-signature p {
+				padding: 2pt;
+			}
 		</style>
 		<script>
 			$(document).ready(function() {
@@ -113,6 +120,11 @@
 						<li>List item 3</li>
 					</ul>
 					<p> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros. Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.</p>
+					<div class="owner-signature">
+						<p>- Kacey Price</p>
+						<p>- Gen Schmitt</p>
+						<p>- Luke Masters</p>
+					</div>
 				</div>
 				<div id="mapid">
 

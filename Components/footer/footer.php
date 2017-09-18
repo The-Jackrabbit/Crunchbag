@@ -31,8 +31,13 @@
 	}
 	.contact-container a {
 		color:  #7A1906 !important;
+		margin: 2pt 4pt;
 	}
 	.contact-container  {
+		text-align: center;
+		margin: 12pt 0pt;
+	}
+	.footer-copyright {
 		text-align: center;
 	}
 </style>
@@ -47,6 +52,7 @@
 		<a href="#">Contact us</a>
 		<a href="#">Reviews</a>
 		<a href="#">Terms of service</a>
-	<p class="footer-copyright">© 2017 CrunchBag</p>
+	
 	</div>
+	<p class="footer-copyright">© 2017 CrunchBag</p>
 </footer>
