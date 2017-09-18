@@ -30,14 +30,6 @@
          include("./Components/header/header.php");
       ?>
 	<div class="max-inline"> 
-		<div class='navbar'>
-  <div class='cart-container'>
-    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-    <div class='cart-desc'>0 items</div>
-  </div>
-  
-</div>
-
   <div class='products-container'>
 
     <div class='shop-card' data-cat='Amazon'>
@@ -94,7 +86,7 @@
         Optional Scent
       </div>
       <div class="product">
-         <img src= "./Assets/purLeaf.jpg" />
+         <img src= "./Assets/Cinn.jpg" />
       </div>
       <div class='cta'>
         <div class="price">$220</div>
@@ -110,7 +102,7 @@
         Optional Scent
       </div>
       <div class="product">
-         <img src= "./Assets/purLeaf.jpg" />
+         <img src= "./Assets/Chai.jpg" />
       </div>
       <div class='cta'>
         <div class="price">$220</div>
@@ -126,7 +118,7 @@
         Optional Scent
       </div>
       <div class="product">
-         <img src= "./Assets/purLeaf.jpg" />
+         <img src= "./Assets/PSL.jpg" />
       </div>
       <div class='cta'>
         <div class="price">$220</div>
