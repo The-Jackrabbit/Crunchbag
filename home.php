@@ -243,8 +243,7 @@
 						<ul class= "leaf">
 							<li><p class="card-text">A <span class="crunchbag">CrunchBag</span> leaf bag is stuffed with dry, crisp leaves to be sent to your door step at anytime of year.</p> </li>
 							<li><p class="card-text"> Recieve your <span class="crunchbag">CrunchBag</span> bag and enjoy the autumn feels.</p></li>
-							<li><p class="card-text"> With <span class="crunchbag">CrunchBag</span>, autumn is only a few clicks away... </p></li>	
-						</ul>
+							<img style= "margin-top:20pt;" src="Assets/img/leaves.png" alt= leaves>						</ul>
 					</div>
 				</div>
 
