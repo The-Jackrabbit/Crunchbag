@@ -35,9 +35,6 @@
 				margin-top: 10pt;
 				font-size: 28pt;
 			}
-			span.light-italic {
-				font-style: italic;
-			}
 			.banner-padding {
 				padding-bottom: 400pt;
 			}
@@ -138,6 +135,10 @@
 			div.definition h3 {
 				margin: 6pt 0pt;
 			}
+			div.definition h1 img {
+				max-height: 32pt;
+				transform: translateY(6pt);
+			}
 			table.definition tr {
 				height: 50pt;
 			}
@@ -177,7 +178,7 @@
 				<div class="inner-transbox">
 				  <div class="inner-inner-transbox">
 					<p class="banner-text-title">crunchy leaves</p>
-					<p class="banner-text">any<span class="light-italic">time</span>. any<span class="light-italic">where.</span></p>
+					<p class="banner-text">any<span class="italic">time</span>. any<span class="italic">where.</span></p>
 				 </div>
 				</div>
 			  </div> 
@@ -186,24 +187,24 @@
 		<div class="banner-padding"></div>
 		<div class="max-inline">
 			<div class="definition">
-				<h1>Definition: <img src="./Assets/s-logo.png"></h1>
+				<h1>Definition: <img src="/Assets/img/s-logo.png"></h1>
 				<h3><span style= "font-style: italic;" >plural</span> CrunchyBois</h3>
 				<table class="definition">
 					<tr>
 						<td class="enumeration">1</td>
-						<td class="definition"><span style= "font-style: italic;" >noun:</span> a local Charlottesville, Virginia service that rakes, collects, prepares, and delivers high-quality, crisp leaves around the world to allow everyone to enjoy those autumn feels </td>
+						<td class="definition"><span class="italic">noun:</span> a local Charlottesville, Virginia service that rakes, collects, prepares, and delivers high-quality, crisp leaves around the world to allow everyone to enjoy those autumn feels </td>
 					</tr>
 					<tr>
 						<td class="enumeration">2</td>
-						<td class="definition"><span style= "font-style: italic;" >noun:</span> our delivery parcel; a bag full of sweet, dry leaves </td>
+						<td class="definition"><span class="italic">noun:</span> our delivery parcel; a bag full of sweet, dry leaves </td>
 					</tr>
 					<tr>
 						<td class="enumeration">3</td>
-						<td class="definition"><span style= "font-style: italic;" >adjective:</span> a way to describe high quality leaves </td>
+						<td class="definition"><span class="italic">adjective:</span> a way to describe high quality leaves </td>
 					</tr>
 					<tr>
 						<td></td>
-						<td class="definition"><span style= "font-style: italic;" >example sentence:</span>  "Wow Tom, those squishy leaves aren't CrunchBag at all. We should just order a CrunchBag of leaves from CrunchBag, where they are guaranteed to be CrunchBag. </td>
+						<td class="definition"><span class="italic">example sentence:</span>  "Wow Tom, those squishy leaves aren't CrunchBag at all. We should just order a CrunchBag of leaves from CrunchBag, where they are guaranteed to be CrunchBag. </td>
 					</tr>
 				</table>
 			</div>
