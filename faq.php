@@ -1,10 +1,8 @@
 <?php session_start();?>
 <html lang="en">
    <head>
-	   
       <link rel="stylesheet" href="./Assets/reset.css" />
 		<link rel="stylesheet" href="./Assets/styles.css" />
-		<link rel="stylesheet" href="./Assets/style.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
 		<script src="./Assets/jquery.min.js"></script>
@@ -33,7 +31,6 @@
 			}
 			.faq-answer {
 				padding: 0pt 24pt;
-
 				padding-bottom: 12pt;
 			}
 			div.toggle hr {
@@ -46,8 +43,8 @@
    <body>
       <?php
          $pkg = Array(
-               "title" => "BackLog",
-					"title_url" => "dashboard.php",
+               "title" => "CrunchBag",
+					"title_url" => "home.php",
 					"links" => Array(
 						"about.php" => "About",
 						"faq.php" => "FAQ",
@@ -131,7 +128,7 @@
 			</div>
 			<script>
 				$('div.toggle').click(function() {
-					$(this).children('.faq-answer').toggle();
+					$(this).children('.faq-answer').slideToggle();
 				})
 			</script>
 		</div>

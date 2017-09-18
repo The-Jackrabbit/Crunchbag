@@ -4,18 +4,11 @@
       <link rel="stylesheet" href="./Assets/reset.css" />
       <link rel="stylesheet" href="./Assets/styles.css" />
 		<link rel="icon" href="./Assets/favicon.ico" />
-		<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">	
-		<link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<script src="./Assets/jquery.min.js"></script>
 		<style>
-			p, a, h1, h2, h3, span, div {
-				font-family: 'Lora', serif;
-			}
 			.banner {
-				background-image: url("./Assets/banner5.jpeg");
+				background-image: url("/Assets/img/banner5.jpeg");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -24,11 +17,9 @@
 				left: 0;
 				right: 0;
 				text-align: center;
-				
 				color: white;
 				z-index: -1;
-				margin-bottom: 400pt;
-				
+				margin-bottom: 400pt;			
 			}
 			div.banner-body {
 				position: relative;
@@ -43,58 +34,12 @@
 			.banner-text {
 				margin-top: 10pt;
 				font-size: 28pt;
-
 			}
 			span.light-italic {
 				font-style: italic;
 			}
 			.banner-padding {
 				padding-bottom: 400pt;
-			}
-
-			.step-container {
-				width: 75%;
-				vertical-align: middle;
-				background-color: #f2e8e3;
-				padding: 15px;
-				border-radius: 25px;
-				margin: 10px;
-			}
-			
-			.heading-container {
-				width: 30%;
-				vertical-align: middle;
-				background-color: #f2e8e3;
-				padding: 20px;
-				border-radius: 25px;
-				margin-top: 30px;
-				margin-left: 30px;
-				text-align: center;
-			}
-			
-			.step-description {
-				vertical-align: middle;
-			}
-			.step-description p {
-				padding: 12pt;
-				background-color: white;
-				border: double;
-				border-width: 15px;
-			}
-			.step-graphic {
-				width: 150pt;
-			}
-			.step-graphic img {
-				width: 150pt;
-			}
-			.left-align {
-				float: left;
-			}
-			.right-align {
-				float: right;
-			}
-			table.step-table {
-				table-layout: fixed;
 			}
 
 			.transbox {
@@ -111,7 +56,6 @@
 				width: min-content;
 				white-space: nowrap;
 				border-style: double;
-				
 			}	
 			.inner-inner-transbox * {
 				font-family: 'Lora', serif !important;
@@ -120,8 +64,7 @@
 				padding: 10px;
 				background-color: rgba(120,30,0,.3);
 				width: min-content;
-				white-space: nowrap;
-				
+				white-space: nowrap;		
 			}
 			.home-info-card {
 				background-color: white;
@@ -155,8 +98,12 @@
 			}
 			
 			ul.leaf {
-				list-style-image: url('/Assets/leafbullet.png');
+				list-style-image: url('/Assets/img/leafbullet.png');
 				padding-left: 5pt;
+			}
+			ul.leaf li {
+				margin: 8pt; 
+				text-indent: -8pt;
 			}
 			.actions input {
 				color: white;
@@ -194,14 +141,23 @@
 			table.definition tr {
 				height: 50pt;
 			}
+			.crunchbag {
+				font-family: 'Lora', serif;
+				font-weight: bold;
+			}
+			.info-text h1 {
+				font-weight: bold; 
+				padding:14pt; 
+				color: #4f4541; 
+			}
 		</style>
 
 	</head>
    <body style="background-color: #e0d2cc;">
       <?php
          $pkg = Array(
-               "title" => "BackLog",
-					"title_url" => "dashboard.php",
+               "title" => "CrunchBag",
+					"title_url" => "home.php",
 					"links" => Array(
 						"about.php" => "About",
 						"faq.php" => "FAQ",
@@ -247,42 +203,40 @@
 
 				<div class="home-info-card">
 					<div class="info-icon">
-						<img src="./Assets/leaf-pentagon.png">
+						<img src="/Assets/img/leaf-pentagon.png">
 					</div>
 					<div class="info-text">
-						<h1 style= "font-weight: bold; padding: 20px; color: #4f4541; ">Collection</h1>
+						<h1>Collection</h1>
 						<ul class="leaf">
-							<li style="margin: 10px; text-indent: -10px;"><p class="card-text">High quality leaves are raked and collected from local neighboorhood families. </p> </li>
-							<li style="margin: 10px; text-indent: -10px;"><p class="card-text">Leaf raking and collection comes to no cost to the family or orgnaization. </p> </li>
-							<li style="margin: 10px; text-indent: -10px;"><p class="card-text">Already have your leaves raked and ready to go? We donate 20% of proceeds to local charities for pre-collected leaves.</p> </p> </li>
+							<li><p class="card-text">High quality leaves are raked and collected from local neighboorhood families. </p> </li>
+							<li><p class="card-text">Leaf raking and collection comes to no cost to the family or orgnaization. </p> </li>
+							<li><p class="card-text">Already have your leaves raked and ready to go? We donate 20% of proceeds to local charities for pre-collected leaves.</p> </p> </li>
 						</ul>
 					</div>
 				</div>
 				<div class="home-info-card">
 					<div class="info-icon">
-						<img src="./Assets/truck-pentagon.png">
+						<img src="/Assets/img/truck-pentagon.png">
 					</div>
 					<div class="info-text">
-						<h1 style= "font-weight: bold; padding: 20px; color: #4f4541; ">Preparation</h1>
+						<h1>Preparation</h1>
 						<ul class= "leaf">
-							<li style="margin: 10px; text-indent: -10px;"><p class="card-text">Is autumn rainy in your area this year? Our leaves are professionally dried and prepared to prevent organic breakdown and ensure optimal frollic readiness. </p> </p></li>
-							<li style="margin: 10px; text-indent: -10px;"><p class="card-text">Are leaves not quite enough to get that cozy autumnal feeling? Choose from three festive scents of potpourri to add to your pile of leaves!</p> </li>
+							<li><p class="card-text">Is autumn rainy in your area this year? Our leaves are professionally dried and prepared to prevent organic breakdown and ensure optimal frollic readiness. </p> </p></li>
+							<li><p class="card-text">Are leaves not quite enough to get that cozy autumnal feeling? Choose from three festive scents of potpourri to add to your pile of leaves!</p> </li>
 						</ul>
 				</div>
 				</div>
 				<div class="home-info-card">
 					<div class="info-icon">
-						<img src="./Assets/box-pentagon.png">
+						<img src="/Assets/img/box-pentagon.png">
 					</div>
 					<div class="info-text">
-						<h1 style= "font-weight: bold; padding: 20px; color: #4f4541; ">Autumn</h1>
+						<h1>Autumn</h1>
 						<ul class= "leaf">
-							<li style="margin: 10px; text-indent: -10px;"><p class="card-text">A <span style= "font-family: 'Lora', serif; font-weight: bold;">CrunchBag</span> leaf bag is stuffed with dry, crisp leaves to be sent to your door step at anytime of year.</p> </li>
-							<li style="margin: 10px; text-indent: -10px;"><p class="card-text"> Recieve your <span style= "font-family: 'Lora', serif; font-weight: bold;">CrunchBag</span> bag and enjoy the autumn feels.</p></li>
-							<li style="margin: 10px; text-indent: -10px;"><p class="card-text"> With CrunchBag, autumn is only a few clicks away... </p></li>
-							
-						</ul>		
-
+							<li><p class="card-text">A <span class="crunchbag">CrunchBag</span> leaf bag is stuffed with dry, crisp leaves to be sent to your door step at anytime of year.</p> </li>
+							<li><p class="card-text"> Recieve your <span class="crunchbag">CrunchBag</span> bag and enjoy the autumn feels.</p></li>
+							<li><p class="card-text"> With <span class="crunchbag">CrunchBag</span>, autumn is only a few clicks away... </p></li>	
+						</ul>
 					</div>
 				</div>
 

@@ -14,8 +14,8 @@
    <body>
       <?php
          $pkg = Array(
-               "title" => "BackLog",
-					"title_url" => "dashboard.php",
+               "title" => "CrunchBag",
+					"title_url" => "home.php",
 					"links" => Array(
 						"about.php" => "About",
 						"faq.php" => "FAQ",
@@ -38,7 +38,7 @@
 				<div class="desc">
 				</div>
 				<div class="product">
-					<img src= "./Assets/purLeaf.jpg" />
+					<img src= "/Assets/img/purLeaf.jpg" />
 				</div>
 				<div class='cta'>
 				<div class="price">$50.00</div>
@@ -54,7 +54,7 @@
 					
 				</div>
 				<div class="product">
-					<img src= "./Assets/purLeaf.jpg" />
+					<img src= "/Assets/img/purLeaf.jpg" />
 				</div>
 				<div class='cta'>
 				<div class="price">$80.00</div>
@@ -69,7 +69,7 @@
 				<div class="desc">
 				</div>
 				<div class="product">
-					<img src= "./Assets/purLeaf.jpg" />
+					<img src= "/Assets/img/purLeaf.jpg" />
 				</div>
 				<div class='cta'>
 				<div class="price">$150.00</div>
@@ -85,7 +85,7 @@
 				Optional Scent
 				</div>
 				<div class="product">
-					<img src= "./Assets/Cinn.jpg" />
+					<img src= "/Assets/img/Cinn.jpg" />
 				</div>
 				<div class='cta'>
 				<div class="price">$25.00</div>
@@ -101,7 +101,7 @@
 				Optional Scent
 				</div>
 				<div class="product">
-					<img src= "./Assets/Chai.jpg" />
+					<img src= "/Assets/img/Chai.jpg" />
 				</div>
 				<div class='cta'>
 				<div class="price">$25.00</div>
@@ -117,7 +117,7 @@
 				Optional Scent
 				</div>
 				<div class="product">
-					<img src= "./Assets/PSL.jpg" />
+					<img src= "/Assets/img/PSL.jpg" />
 				</div>
 				<div class='cta'>
 				<div class="price">$25.00</div>

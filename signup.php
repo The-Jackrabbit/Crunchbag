@@ -42,8 +42,8 @@
    <body>
 	<?php
          $pkg = Array(
-               "title" => "BackLog",
-					"title_url" => "dashboard.php",
+               "title" => "CrunchBag",
+					"title_url" => "home.php",
 					"links" => Array(
 						"about.php" => "About",
 						"faq.php" => "FAQ",

@@ -719,8 +719,8 @@
    <body style="background-color: #e0d2cc;">
       <?php
          $pkg = Array(
-               "title" => "BackLog",
-					"title_url" => "dashboard.php",
+               "title" => "CrunchBag",
+					"title_url" => "home.php",
 					"links" => Array(
 						"about.php" => "About",
 						"faq.php" => "FAQ",
@@ -798,9 +798,6 @@
 							
 							</div>
 								
-		
-		
-	<!--	<table class="step-table">
 	    <td>
 			<div class="heading-container">
 			<b class="heading-text">

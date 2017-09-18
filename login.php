@@ -1,9 +1,3 @@
-<?php 
-	session_start();
-	if (!is_null($_SESSION['userId'])) {
-		header("Location: http://localhost:4444/backlog/dashboard.php"); /* Redirect browser */
-	}
-?>
 <html lang="en">
    <head>
       <link rel="stylesheet" href="./Assets/reset.css" />
@@ -39,8 +33,8 @@
    <body>
 	<?php
          $pkg = Array(
-               "title" => "BackLog",
-					"title_url" => "dashboard.php",
+               "title" => "CrunchBag",
+					"title_url" => "home.php",
 					"links" => Array(
 						"about.php" => "About",
 						"faq.php" => "FAQ",
@@ -68,6 +62,7 @@
 					<a href="./signup.php" class="signup-redirect">Don't have an account?</a>
 				</form>
 			</div>
+			
 		</div>
    </body>
 </html>
