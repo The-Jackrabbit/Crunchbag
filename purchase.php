@@ -12,6 +12,15 @@
 		<style>
 			.products-container {
 				min-height: 75vh !important;
+				margin: 0 auto;
+				text-align: center;
+				width: 100%;
+			}
+			.shop-card {
+				display: inline-block !important;
+			}
+			body {
+				background-color: #e0d2cc !important;
 			}
 		</style>
 	</head>
