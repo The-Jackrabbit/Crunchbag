@@ -113,14 +113,13 @@
 			}
 			.login-card {
 				background-color: white;
-				box-shadow: 4pt 4pt 4pt black;
-				width: 700pt;
+				box-shadow: 4pt 4pt 4pt gray;
 				padding: 12pt;
-				display: inline-block;
 				margin: 12pt;
 				vertical-align: top;
 				min-height: 100pt;
 			}
+
 		</style>
 	</head>
    <body>

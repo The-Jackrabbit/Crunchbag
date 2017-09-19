@@ -110,9 +110,7 @@
 			.signup-card {
 				background-color: white;
 				box-shadow: 4pt 4pt 4pt grey;
-				width: 700pt;
 				padding: 12pt;
-				display: inline-block;
 				margin: 12pt;
 				vertical-align: top;
 				min-height: 400pt;
