@@ -71,7 +71,7 @@
 				border-bottom: 1pt solid #33464F;
 				width: 100%;
 				font-size: 16pt;
-				color: white !important;
+				color: black !important;
 			}
 			.entry input::-webkit-input-placeholder {
 				color: #ccc !important;
@@ -92,7 +92,7 @@
 				vertical-align: middle;
 			}
 			#myFooter {
-				background-color: #49606C !important;
+				background-color: #EAAF5E !important;
 			}
 			input[type=submit] {
 				width: 200pt;
@@ -109,7 +109,17 @@
 				
 			}
 			body {
-				background-color: #49606C;
+				background-color: #FBC06F;
+			}
+			.login-card {
+				background-color: white;
+				box-shadow: 4pt 4pt 4pt black;
+				width: 700pt;
+				padding: 12pt;
+				display: inline-block;
+				margin: 12pt;
+				vertical-align: top;
+				min-height: 100pt;
 			}
 		</style>
 	</head>
@@ -143,6 +153,7 @@
 					echo '<h1>you goofed, try again bozo</h1>';
 				}
 			?>
+		<div class= "login-card">
 			<form action="./Helpers/submitSignup.php" method="POST" id='signup-form'>
 			<table class="signup-form">
 				<tr class="entry">
@@ -164,7 +175,7 @@
 				</tr>
 			</table>
 		</form>
-			
+		</div>
 		</div>
 		<div class="footer">
 			<?php include("./Components/footer/footer.php");?>

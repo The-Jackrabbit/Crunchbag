@@ -35,6 +35,7 @@
 				background-size: cover;
 				height:200pt;
 				position: absolute;
+				down: 50pt;
 				left: 0;
 				right: 0;
 				text-align: center;
@@ -69,7 +70,7 @@
 				border-bottom: 1pt solid #843F13;
 				width: 100%;
 				font-size: 16pt;
-				color: white !important;
+				color: black !important;
 			}
 			.entry input::-webkit-input-placeholder {
 				color: #DF7A00 !important;
@@ -90,7 +91,7 @@
 				vertical-align: middle;
 			}
 			#myFooter {
-				background-color: #FBC06F  !important;
+				background-color: #EAAF5E  !important;
 			}
 			input[type=submit] {
 				width: 200pt;
@@ -105,6 +106,16 @@
 				margin:0 auto;
 				text-align: center;
 				
+			}
+			.signup-card {
+				background-color: white;
+				box-shadow: 4pt 4pt 4pt grey;
+				width: 700pt;
+				padding: 12pt;
+				display: inline-block;
+				margin: 12pt;
+				vertical-align: top;
+				min-height: 400pt;
 			}
 		</style>
 	</head>
@@ -133,6 +144,7 @@
 		</div>
 		<div class="banner-padding"></div>
 		<div class="max-inline">
+			<div class= "signup-card">
 			<form action="./Helpers/submitSignup.php" method="POST" id='signup-form'>
 				<table class="signup-form">
 					<tr class="entry">
@@ -178,6 +190,7 @@
 					</tr>
 				</table>
 			</form>
+			</div>
 		</div>
 		<script>
 			$("#signup-form").submit(function() {

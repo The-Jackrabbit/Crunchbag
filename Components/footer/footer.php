@@ -48,10 +48,10 @@
 		<div><a href="#" class="social-icons">t</a></div>
 	</div>
 	<div class="contact-container">
-		<a href="#">Company Information</a>
-		<a href="#">Contact us</a>
-		<a href="#">Reviews</a>
-		<a href="#">Terms of service</a>
+		<a href="/about.php">About</a>
+		<a href="/purchase.php">Purchase</a>
+		<a href="/faq.php">FAQ</a>
+		<a href="/signup.php">Sign Up</a>
 	
 	</div>
 	<p class="footer-copyright">© 2017 CrunchBag</p>
