@@ -140,7 +140,7 @@
                <tr id="header-row">
                   <td id="title" class="title">
                      <a href="./home.php">
-							<img style="width: 165pt" src="/Assets/img/logo.png">
+							<img style="width: 165pt" src="Assets/img/logo.png">
                  
 							</a>
 						</td>

@@ -29,7 +29,7 @@
 				fill: white;
 			}
 			.login-banner {
-				background-image: url("/Assets/T_22.svg");
+				background-image: url("Assets/T_22.svg");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;

@@ -119,7 +119,7 @@
 				padding: 12pt;
 			}
 			ul.leaf {
-				list-style-image: url('/Assets/img/leafbullet.png');
+				list-style-image: url('Assets/img/leafbullet.png');
 				padding-left: 5pt;
 				line-height: 20px;
 			}
@@ -196,7 +196,7 @@
 						High quality leaves are raked and collected from local neighboorhood families at no charge.
 						</p></td>
 					<td class="step-graphic">
-						<img src="/Assets/img/step1.png">
+						<img src="Assets/img/step1.png">
 					</td>
 				</tr>
 			</table>
@@ -205,7 +205,7 @@
 			<table class="step-table">
 				<tr>
 					<td class="step-graphic">
-						<img src="/Assets/img/step2.png">
+						<img src="Assets/img/step2.png">
 					</td>
 					<td class="step-description">
 						<p >
@@ -225,7 +225,7 @@
 						</p>
 					</td>
 					<td class="step-graphic">
-						<img src="/Assets/img/step3.png">
+						<img src="Assets/img/step3.png">
 					</td>
 				</tr>
 			</table>

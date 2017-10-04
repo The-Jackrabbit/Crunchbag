@@ -28,7 +28,7 @@
 				
 			}
 			.login-banner {
-				background-image: url("/Assets/T_17.svg");
+				background-image: url("Assets/T_17.svg");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;

@@ -8,7 +8,7 @@
 		<script src="Assets/jquery.min.js"></script>
 		<style>
 			.banner {
-				background-image: url("/Assets/img/banner5.jpeg");
+				background-image: url("Assets/img/banner5.jpeg");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -94,7 +94,7 @@
 			}
 			
 			ul.leaf {
-				list-style-image: url('/Assets/img/leafbullet.png');
+				list-style-image: url('Assets/img/leafbullet.png');
 				padding-left: 5pt;
 			}
 			ul.leaf li {
@@ -186,7 +186,7 @@
 		<div class="banner-padding"></div>
 		<div class="max-inline">
 			<div class="definition">
-				<h1>Definition: <img src="/Assets/img/s-logo.png"></h1>
+				<h1>Definition: <img src="Assets/img/s-logo.png"></h1>
 				<h3><span style= "font-style: italic;" >plural</span> CrunchyBois</h3>
 				<table class="definition">
 					<tr>
@@ -211,7 +211,7 @@
 
 				<div class="home-info-card">
 					<div class="info-icon">
-						<img src="/Assets/img/leaf-pentagon.png">
+						<img src="Assets/img/leaf-pentagon.png">
 					</div>
 					<div class="info-text">
 						<h1>Collection</h1>
@@ -224,7 +224,7 @@
 				</div>
 				<div class="home-info-card">
 					<div class="info-icon">
-						<img src="/Assets/img/truck-pentagon.png">
+						<img src="Assets/img/truck-pentagon.png">
 					</div>
 					<div class="info-text">
 						<h1>Preparation</h1>
@@ -236,7 +236,7 @@
 				</div>
 				<div class="home-info-card">
 					<div class="info-icon">
-						<img src="/Assets/img/box-pentagon.png">
+						<img src="Assets/img/box-pentagon.png">
 					</div>
 					<div class="info-text">
 						<h1>Autumn</h1>

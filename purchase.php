@@ -51,7 +51,7 @@
 				<div class="desc">
 				</div>
 				<div class="product">
-					<img src= "/Assets/img/purLeaf.jpg" />
+					<img src= "Assets/img/purLeaf.jpg" />
 				</div>
 				<div class='cta'>
 				<div class="price">$50.00</div>
@@ -67,7 +67,7 @@
 					
 				</div>
 				<div class="product">
-					<img src= "/Assets/img/purLeaf.jpg" />
+					<img src= "Assets/img/purLeaf.jpg" />
 				</div>
 				<div class='cta'>
 				<div class="price">$80.00</div>
@@ -82,7 +82,7 @@
 				<div class="desc">
 				</div>
 				<div class="product">
-					<img src= "/Assets/img/purLeaf.jpg" />
+					<img src= "Assets/img/purLeaf.jpg" />
 				</div>
 				<div class='cta'>
 				<div class="price">$150.00</div>
@@ -98,7 +98,7 @@
 				Optional Scent
 				</div>
 				<div class="product">
-					<img src= "/Assets/img/Cinn.jpg" />
+					<img src= "Assets/img/Cinn.jpg" />
 				</div>
 				<div class='cta'>
 				<div class="price">$25.00</div>
@@ -114,7 +114,7 @@
 				Optional Scent
 				</div>
 				<div class="product">
-					<img src= "/Assets/img/Chai.jpg" />
+					<img src= "Assets/img/Chai.jpg" />
 				</div>
 				<div class='cta'>
 				<div class="price">$25.00</div>
@@ -130,7 +130,7 @@
 				Optional Scent
 				</div>
 				<div class="product">
-					<img src= "/Assets/img/PSL.jpg" />
+					<img src= "Assets/img/PSL.jpg" />
 				</div>
 				<div class='cta'>
 				<div class="price">$25.00</div>
