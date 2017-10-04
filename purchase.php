@@ -1,14 +1,14 @@
 <?php session_start();?>
 <html lang="en">
    <head>
-      <link rel="stylesheet" href="./Assets/reset.css" />
-      <link rel="stylesheet" href="./Assets/styles.css" />
-      <link rel="stylesheet" href="./Assets/purchase.css"/>
+      <link rel="stylesheet" href="Assets/reset.css" />
+      <link rel="stylesheet" href="Assets/styles.css" />
+      <link rel="stylesheet" href="Assets/purchase.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
-		<script src="./Assets/jquery.min.js"></script>
-		<script src="./Assets/purchase.js"></script>
+		<script src="Assets/jquery.min.js"></script>
+		<script src="Assets/purchase.js"></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js '></script>
-		<link rel="icon" href="./Assets/favicon.ico" />
+		<link rel="icon" href="Assets/favicon.ico" />
 		<style>
 			.products-container {
 				min-height: 75vh !important;

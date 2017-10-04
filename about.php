@@ -1,9 +1,9 @@
 <?php session_start();?>
 <html lang="en">
    <head>
-      <link rel="stylesheet" href="./Assets/reset.css" />
-      <link rel="stylesheet" href="./Assets/styles.css" />
-		<link rel="icon" href="./Assets/favicon.ico" />
+      <link rel="stylesheet" href="Assets/reset.css" />
+      <link rel="stylesheet" href="Assets/styles.css" />
+		<link rel="icon" href="Assets/favicon.ico" />
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
@@ -12,7 +12,7 @@
 		<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
 		integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
 		crossorigin=""></script>
-		<script src="./Assets/jquery.min.js"></script>
+		<script src="Assets/jquery.min.js"></script>
 		<style>
 			
 			.step-container {

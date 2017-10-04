@@ -1,21 +1,21 @@
 <?php session_start();?>
 <html lang="en">
    <head>
-      <link rel="stylesheet" href="./Assets/reset.css" />
-      <link rel="stylesheet" href="./Assets/styles.css" />
-		<link rel="icon" href="./Assets/favicon.ico" />
+      <link rel="stylesheet" href="Assets/reset.css" />
+      <link rel="stylesheet" href="Assets/styles.css" />
+		<link rel="icon" href="Assets/favicon.ico" />
 		<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">	
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">        <link rel="stylesheet" href="assets/css/Footer-white.css">
 		  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/Footer-white.css">
-		<script src="./Assets/jquery.min.js"></script>
+		<script src="Assets/jquery.min.js"></script>
 		<style>
 			p, a, h1, h2, h3, span, div {
 				font-family: 'Lora', serif;
 			}
 			.banner {
-				background-image: url("./Assets/banner5.jpeg");
+				background-image: url("Assets/banner5.jpeg");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -815,7 +815,7 @@
 						High quality leaves are raked and collected from local neighboorhood families at no charge.
 						</p></td>
 					<td class="step-graphic">
-						<img src="./Assets/step1.png">
+						<img src="Assets/step1.png">
 					</td>
 				</tr>
 			</table>
@@ -824,7 +824,7 @@
 			<table class="step-table">
 				<tr>
 					<td class="step-graphic">
-						<img src="./Assets/step2.png">
+						<img src="Assets/step2.png">
 					</td>
 					<td class="step-description">
 						<p class="normal-text">
@@ -844,7 +844,7 @@
 						</p>
 					</td>
 					<td class="step-graphic">
-						<img src="./Assets/step3.png">
+						<img src="Assets/step3.png">
 					</td>
 				</tr>
 			</table>

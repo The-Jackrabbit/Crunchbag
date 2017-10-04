@@ -1,8 +1,8 @@
 <html lang="en">
    <head>
-      <link rel="stylesheet" href="./Assets/reset.css" />
-      <link rel="stylesheet" href="./Assets/styles.css" />
-		<link rel="icon" href="./Assets/favicon.ico" />
+      <link rel="stylesheet" href="Assets/reset.css" />
+      <link rel="stylesheet" href="Assets/styles.css" />
+		<link rel="icon" href="Assets/favicon.ico" />
 		<style>
 			div.login-form {
 				background-color: white;

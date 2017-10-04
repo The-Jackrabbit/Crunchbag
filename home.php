@@ -1,11 +1,11 @@
 <?php session_start();?>
 <html lang="en">
    <head>
-      <link rel="stylesheet" href="./Assets/reset.css" />
-      <link rel="stylesheet" href="./Assets/styles.css" />
-		<link rel="icon" href="./Assets/favicon.ico" />
+      <link rel="stylesheet" href="Assets/reset.css" />
+      <link rel="stylesheet" href="Assets/styles.css" />
+		<link rel="icon" href="Assets/favicon.ico" />
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-		<script src="./Assets/jquery.min.js"></script>
+		<script src="Assets/jquery.min.js"></script>
 		<style>
 			.banner {
 				background-image: url("/Assets/img/banner5.jpeg");
