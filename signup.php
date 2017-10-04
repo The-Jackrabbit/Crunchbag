@@ -297,13 +297,14 @@
 			$('form input').keyup(function() {
 				var input_id = $(this).attr("id");
 				var num_pattern = /[0-9]/;
-				var sym_pattern = /[!@#$%^&*();:]/;
+				var sym_pattern = /[!@#$%^&*();:.\/]/;
 				if (input_id === "first_name" || input_id === "last_name") {
 					var num_test = !num_pattern.test($(this).val());
 					var sym_test = !sym_pattern.test($(this).val());
 					$(this).toggleErrorMessage(!(num_test && sym_test));
 					
 				}
+
 				if (input_id === "zip") {
 					var zip_pattern = /[^0-9]/;
 					var zip_test = zip_pattern.test($(this).val());
@@ -315,6 +316,9 @@
 				var email_test = email_pattern.test($(this).val());
 				$(this).toggleErrorMessage(!(email_test));
 				
+			})
+			$(document).ready(function() {
+				$('a').css("color", "blue");
 			})
 			$("#signup-form").submit(function() {
 				// MATCHING PASSWORDS

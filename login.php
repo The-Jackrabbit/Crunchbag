@@ -153,18 +153,18 @@
 				}
 			?>
 		<div class= "login-card">
-			<form action="./Helpers/submitSignup.php" method="POST" id='signup-form'>
+			<form action="./Helpers/submitLogin.php" method="POST" id='signup-form'>
 			<table class="signup-form">
 				<tr class="entry">
 					<td>Username:</td>
 					<td>
-						<input type="text" name="first_name" placeholder="Username">
+						<input type="text" name="username" placeholder="Username">
 					</td>
 				</tr>
 				<tr class="entry">
 					<td>Password:</td>
 					<td>
-						<input type="text" name="last_name" placeholder="Password">
+						<input type="password" name="password" placeholder="Password">
 					</td>
 				</tr>
 				<tr >
