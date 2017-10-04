@@ -148,10 +148,10 @@
 		<div class="banner-padding"></div>
 		<div class="max-inline">
 			<?php
-				if ($_GET["redirect"]) {
-					echo '<h1>you goofed, try again bozo</h1>';
-				}
-			?>
+		//		if ($_GET["redirect"]) {
+		//			echo '<h1>you goofed, try again bozo</h1>';
+		//		}
+		//	?>
 		<div class= "login-card">
 			<form action="./Helpers/submitLogin.php" method="POST" id='signup-form'>
 			<table class="signup-form">

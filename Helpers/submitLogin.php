@@ -19,9 +19,8 @@
 				header("Location: /about.php"); /* Redirect browser */
 				
 			} else {
-				//echo "ya fucked up kid";
-				echo "<p>$pw_hash</p>";
-				echo "<p>$row[password]</p>";
+			//	echo "<p>$pw_hash</p>";
+			//	echo "<p>$row[password]</p>";
 			}
 		}
 		
