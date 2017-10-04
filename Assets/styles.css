@@ -82,7 +82,7 @@ input[type=button], input[type=submit] {
 	font-size: 12pt;
 	padding:3pt;
 	text-align: center;
-	width: min-content;
+	width: min-content; width: -moz-min-content;
 }
 
 input[type=button]:active, input[type=submit]:active {

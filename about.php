@@ -84,7 +84,7 @@
 				background-color: #7A1906 !important;
 			}
 			.actions {
-				width: min-content;
+				width: min-content; width: -moz-min-content;
 				white-space: nowrap;
 				margin: 0 auto;
 			}

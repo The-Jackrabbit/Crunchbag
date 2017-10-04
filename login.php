@@ -6,7 +6,7 @@
 		<style>
 			div.login-form {
 				background-color: white;
-				width: min-content;
+				width: min-content; width: -moz-min-content;
 				box-shadow: 3pt 3pt 10pt gray;
 				padding: 12pt;
 				text-align: center;

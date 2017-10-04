@@ -42,7 +42,7 @@
 			.transbox {
 				padding: 30px;
 				background-color: rgba(255,255,255,0.5);
-				width: min-content;
+				width: min-content; width: -moz-min-content;
 				white-space: nowrap;
 				margin: 0 auto;
 				
@@ -50,7 +50,7 @@
 			.inner-inner-transbox {	
 				padding: 20px;
 				background-color: rgba(120,60,0,.6);
-				width: min-content;
+				width: min-content; width: -moz-min-content;
 				white-space: nowrap;
 				border-style: double;
 			}	
@@ -60,7 +60,7 @@
 			.inner-transbox {	
 				padding: 10px;
 				background-color: rgba(120,30,0,.3);
-				width: min-content;
+				width: min-content; width: -moz-min-content;
 				white-space: nowrap;		
 			}
 			.home-info-card {
@@ -110,7 +110,7 @@
 				background-color: #7A1906  !important;
 			}
 			.actions {
-				width: min-content;
+				width: min-content; width: -moz-min-content;
 				white-space: nowrap;
 				margin: 0 auto;
 			}

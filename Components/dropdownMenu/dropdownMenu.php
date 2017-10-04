@@ -7,7 +7,7 @@
 	}
 	.head {
 		background-color: #631505;
-		height: min-content;
+		height: min-content; width: -moz-min-content;
 		width: 100%;
 	}
 	.dropdown-link {

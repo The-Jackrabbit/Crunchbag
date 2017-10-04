@@ -10,7 +10,7 @@
 	}
 	.footer-social {
 		margin: 0 auto;
-		width: min-content;
+		width: min-content; width: -moz-min-content;
 		white-space: nowrap;
 	}
 	.footer-social a {
