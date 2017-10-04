@@ -235,7 +235,7 @@
 						<td>
 							<input required id="zip" type="text" name="zip" placeholder="12134">
 							<?php
-
+								$text = "Zip Codes cannot include numbers or symbols and must be at least 5 digits";
 								include("./Components/errorDialogue/errorDialogue.php");
 							?>
 						</td>
