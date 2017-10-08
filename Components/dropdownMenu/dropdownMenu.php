@@ -42,7 +42,7 @@
 		height: 20pt;
 		padding-right: 15pt;
 		text-align: end;
-		color: #6E1A0F;
+		color: #F0AF45;
 		font-size: 20pt;
 		cursor: pointer;
 	}

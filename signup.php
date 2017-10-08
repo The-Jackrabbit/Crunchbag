@@ -115,6 +115,18 @@
 				vertical-align: top;
 				min-height: 400pt;
 			}
+			.taken-dialogue-container {
+				width: 100%;
+				z-index: 10000;
+			}
+			.taken-dialogue-body {
+				margin: 6pt 0pt;
+				padding: 6pt;
+				border: 1pt solid lightgray;
+			}
+			.taken-dialogue-body span {
+				color: red;
+			}
 		</style>
 	</head>
    <body>
@@ -148,7 +160,7 @@
 					<tr class="entry">
 						<td>First Name:</td>
 						<td>
-							<input required type="text" id="first_name" name="first_name" placeholder="First Name">
+							<input required type="text" id="first_name" name="first_name" placeholder="First Name" value=<?php echo "'$_GET[first_name]'";?>>
 							<?php
 								$text = "First Names cannot include numbers or symbols";
 								include("./Components/errorDialogue/errorDialogue.php");
@@ -158,7 +170,7 @@
 					<tr class="entry">
 						<td>Last Name:</td>
 						<td>
-							<input required type="text" id="last_name" name="last_name" placeholder="Last Name">
+							<input required type="text" id="last_name" name="last_name" placeholder="Last Name" value=<?php echo "'$_GET[last_name]'";?>>
 							<?php
 								$text = "Last Names cannot include numbers or symbols";
 								include("./Components/errorDialogue/errorDialogue.php");
@@ -168,20 +180,42 @@
 					<tr class="entry">
 						<td>Username:</td>
 						<td>
-							<input required id="username" type="text" name="username" placeholder="Username">
+							<input required id="username" type="text" name="username" placeholder="Username" value=<?php echo "'$_GET[username]'";?>>
+							
 							<?php
-
+								
 								include("./Components/errorDialogue/errorDialogue.php");
+							?>
+							<?php
+								if ($_GET["username_result"] == 1) {
+									echo "<div class='taken-dialogue-container'>
+											<div class='taken-dialogue-body'>
+												<p>:( somebody is already using <span>$_GET[username]</span> as their username</p>
+											</div> 
+										</div>
+										";
+								}
 							?>
 						</td>
 					</tr>
 					<tr class="entry">
 						<td>Email:</td>
 						<td>
-							<input required id="email" type="text" name="email" placeholder="Email">
+							<input required id="email" type="text" name="email" placeholder="Email" value=<?php echo "'$_GET[email]'";?>>
+							
 							<?php
 								$text = "Email must match the form something@somewhere.blah";
 								include("./Components/errorDialogue/errorDialogue.php");
+							?>
+							<?php
+								if ($_GET["email_result"] == 1) {
+									echo "<div class='taken-dialogue-container'>
+											<div class='taken-dialogue-body'>
+												<p>:( somebody is already using <span>$_GET[email]</span> as their email</p>
+											</div> 
+										</div>
+										";
+								}
 							?>
 						</td>
 					</tr>
@@ -199,8 +233,13 @@
 						<td>Confirm Password:</td>
 						<td>
 							<input required id="password-confirmation" type="password" name="confirm_password" placeholder="Confirm Password">
+							<div id="password-mismatch" class='taken-dialogue-container' style="display: none">
+								<div class='taken-dialogue-body'>
+									<p>:( your passwords don't match</p>
+								</div> 
+							</div>
 							<?php
-
+								
 								include("./Components/errorDialogue/errorDialogue.php");
 							?>
 						</td>
@@ -213,7 +252,7 @@
 					<tr class="entry">
 						<td>Address:</td>
 						<td>
-							<input required id="address" type="text" name="address" placeholder="1918 Pennsylvania Avenue">
+							<input required id="address" type="text" name="address" placeholder="1918 Pennsylvania Avenue" value=<?php echo "'$_GET[address]'";?>>
 							<?php
 
 								include("./Components/errorDialogue/errorDialogue.php");
@@ -223,7 +262,7 @@
 					<tr class="entry">
 						<td>City:</td>
 						<td>
-							<input required id="city" type="text" name="city" placeholder="Redmond">
+							<input required id="city" type="text" name="city" placeholder="Redmond" value=<?php echo "'$_GET[city]'";?>>
 							<?php
 
 								include("./Components/errorDialogue/errorDialogue.php");
@@ -233,9 +272,10 @@
 					<tr class="entry">
 						<td>ZIP Code:</td>
 						<td>
-							<input required id="zip" type="text" name="zip" placeholder="12134">
+							<input required id="zip" type="text" name="zip" placeholder="12134" value=<?php echo "'$_GET[zip]'";?>>
 							<?php
 								$text = "Zip Codes cannot include numbers or symbols and must be at least 5 digits";
+
 								include("./Components/errorDialogue/errorDialogue.php");
 							?>
 						</td>
@@ -267,18 +307,6 @@
 			</form>
 			</div>
 		</div>
-		<script>
-			
-			<?php
-				if($_GET['email']=== '0') {
-					echo '$("#email").css("background-color", "rgb(255, 178, 173)").attr("placeholder", "Email already in use");';
-				}
-				if ($_GET['user']=== '0') {
-					echo '$("#username").css("background-color", "rgb(255, 178, 173)").attr("placeholder", "Username taken");';
-				}
-			?>
-			
-		</script>
 		<!-- input required VALIDATION -->
 		<script>
 			$.fn.toggleErrorMessage = function(condition) {
@@ -304,28 +332,26 @@
 					$(this).toggleErrorMessage(!(num_test && sym_test));
 					
 				}
-
-				if (input_id === "zip") {
-					var zip_pattern = /[^0-9]/;
-					var zip_test = zip_pattern.test($(this).val());
-					$(this).toggleErrorMessage(zip_test);
-				}
 			});
 			$('form input#email').change(function() {
 				var email_pattern = /[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.][a-zA-Z0-9]+/;
 				var email_test = email_pattern.test($(this).val());
-				$(this).toggleErrorMessage(!(email_test));
-				
-			})
-			$(document).ready(function() {
-				$('a').css("color", "blue");
-			})
+				$(this).toggleErrorMessage(!(email_test));	
+			});
+			$('form input#zip').change(function() {
+				var zip_pattern = /[^0-9]/;
+				var zip_strict_pattern = /[0-9][0-9][0-9][0-9][0-9]/;
+				var zip_test = zip_pattern.test($(this).val());
+				var zip_test_strict = !(zip_strict_pattern.test($(this).val()));
+				$(this).toggleErrorMessage(zip_test_strict || zip_test);
+			});
+
 			$("#signup-form").submit(function() {
 				// MATCHING PASSWORDS
 				var password = $('#password').val();
 				var confirmedPassword = $('#password-confirmation').val();
 				if (password !== confirmedPassword){
-					$('#password-confirmation').css('background-color', '#FFB2AD');
+					$('#password-mismatch').slideToggle();
 					
 					return false;
 				}

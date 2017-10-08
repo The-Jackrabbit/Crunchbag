@@ -1,21 +1,22 @@
 <?php 
-	$username = $_POST["username"];
 	include("connectToDatabase.php");
 
 	// Perform queries 
+	//print_r($_POST);
+	
 	$result = mysqli_query($con,"
 		SELECT * 
 		FROM users 
-		WHERE username='$username'");
+		WHERE username='$_POST[username]'");
 	if ($result->num_rows > 0) {
 		while ($row = $result->fetch_assoc()) {
-			$pw_hash = password_hash($_POST[password], PASSWORD_DEFAULT);
-			if (password_verify($_POST[password], $row["password"])) {
+			//print_r($row);
+			if (password_verify($_POST["password"], $row["password"])) {
 				//echo "eyyyyyyyy";
 				session_start();
 				$_SESSION["userId"] = $row["userId"];
 				$_SESSION["firstName"] = $row["firstName"];
-				$_SESSION["username"] = $username;
+				$_SESSION["username"] = $row["password"];
 				header("Location: /about.php"); /* Redirect browser */
 				
 			} else {

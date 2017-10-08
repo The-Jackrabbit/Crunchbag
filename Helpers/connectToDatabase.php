@@ -1,5 +1,7 @@
 <?php 
-	$con=mysqli_connect("localhost","root","YOUR_PASSWORD","crunchbag");
+	include("databaseCredentials.php");
+	
+	$con=mysqli_connect($servername,$username,$password, $database);
 	// Check connection
 	//echo "hi";
 	if (mysqli_connect_errno()) {
