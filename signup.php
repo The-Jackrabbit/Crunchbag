@@ -276,7 +276,7 @@
 						<td>
 							<input required id="city" type="text" name="city" placeholder="Redmond" value=<?php echo "'$_GET[city]'";?>>
 							<?php
-
+								$text = "Not a valid city";
 								include("./Components/errorDialogue/errorDialogue.php");
 							?>
 						</td>
@@ -374,6 +374,11 @@
 					return false;
 				}
 
+			});
+			$('form input#city').change(function() {
+				var city_pattern = /^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$/;
+				var city_test = city_pattern.test($(this).val());
+				$(this).toggleErrorMessage(!city_test);
 			});
 			// CHANGES RED INPUT TO YELLOW WHEN YOU CHANGE IT
 			$('input').focus(function() {
