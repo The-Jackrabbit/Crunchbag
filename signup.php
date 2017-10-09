@@ -195,7 +195,7 @@
 							<input required id="username" type="text" name="username" placeholder="Username" value=<?php echo "'$_GET[username]'";?>>
 							
 							<?php
-								
+								$text = "Usernames must be 5-20 letters/numbers long, and cannot start with . or _ and cannot include __, _., ._, or ..";
 								include("./Components/errorDialogue/errorDialogue.php");
 							?>
 							<?php
@@ -339,11 +339,16 @@
 				var input_id = $(this).attr("id");
 				var num_pattern = /[0-9]/;
 				var sym_pattern = /[!@#$%^&*();:.\/]/;
+				var user_pattern = /^(?=.{5,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+/;//
 				if (input_id === "first_name" || input_id === "last_name") {
 					var num_test = !num_pattern.test($(this).val());
 					var sym_test = !sym_pattern.test($(this).val());
 					$(this).toggleErrorMessage(!(num_test && sym_test));
 					
+				}
+				if (input_id === "username") {
+					var user_test = user_pattern.test($(this).val());
+					$(this).toggleErrorMessage(!user_test);
 				}
 			});
 			$('form input#email').change(function() {
