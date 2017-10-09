@@ -296,7 +296,8 @@
 						<td>State:</td>
 						<td>
 							<select required name="state" id="state">
-								<option selected disabled>State</option>
+
+								<option selected disabled value="">State</option>
 								<?php include("./Components/statesDropdown/states.php"); ?>
 								
 							</select>
