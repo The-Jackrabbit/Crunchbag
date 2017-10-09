@@ -296,7 +296,8 @@
 						<td>State:</td>
 						<td>
 							<select required name="state" id="state">
-								<option selected disabled>State</option>
+
+								<option selected disabled value="">State</option>
 								<?php include("./Components/statesDropdown/states.php"); ?>
 								
 							</select>
@@ -352,10 +353,10 @@
 			});
 			$('form input#zip').change(function() {
 				var zip_pattern = /[^0-9]/;
-				var zip_strict_pattern = /[0-9][0-9][0-9][0-9][0-9]/;
+				var zip_strict_pattern = /^\d{5}(?:[-\s]\d{4})?$/;
 				var zip_test = zip_pattern.test($(this).val());
 				var zip_test_strict = !(zip_strict_pattern.test($(this).val()));
-				$(this).toggleErrorMessage(zip_test_strict || zip_test);
+				$(this).toggleErrorMessage(zip_test_strict);
 			});
 
 			$("#signup-form").submit(function() {
