@@ -266,7 +266,7 @@
 						<td>
 							<input required id="address" type="text" name="address" placeholder="1918 Pennsylvania Avenue" value=<?php echo "'$_GET[address]'";?>>
 							<?php
-
+								$text = "Addresses can only have letters, numbers, and standard punctuation";
 								include("./Components/errorDialogue/errorDialogue.php");
 							?>
 						</td>
@@ -340,15 +340,12 @@
 				var num_pattern = /[0-9]/;
 				var sym_pattern = /[!@#$%^&*();:.\/]/;
 				var user_pattern = /^(?=.{5,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+/;//
+				
 				if (input_id === "first_name" || input_id === "last_name") {
 					var num_test = !num_pattern.test($(this).val());
 					var sym_test = !sym_pattern.test($(this).val());
 					$(this).toggleErrorMessage(!(num_test && sym_test));
 					
-				}
-				if (input_id === "username") {
-					var user_test = user_pattern.test($(this).val());
-					$(this).toggleErrorMessage(!user_test);
 				}
 			});
 			$('form input#email').change(function() {
@@ -362,6 +359,17 @@
 				var zip_test = zip_pattern.test($(this).val());
 				var zip_test_strict = !(zip_strict_pattern.test($(this).val()));
 				$(this).toggleErrorMessage(zip_test_strict);
+			});
+			$('form input#address').change(function() {
+				var address_pattern = /^[a-zA-Z0-9\s,.'-]*$/;
+				var address_test = address_pattern.test($(this).val());
+				$(this).toggleErrorMessage(!address_test);
+			});
+			$('form input#username').change(function() {
+				var user_pattern = /^(?=.{5,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+/;//
+				
+				var user_test = user_pattern.test($(this).val());
+				$(this).toggleErrorMessage(!user_test);
 			});
 
 			$("#signup-form").submit(function() {
