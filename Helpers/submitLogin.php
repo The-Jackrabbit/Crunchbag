@@ -17,7 +17,7 @@
 				$_SESSION["userId"] = $row["userId"];
 				$_SESSION["firstName"] = $row["firstName"];
 				$_SESSION["username"] = $row["password"];
-				header("Location: /about.php"); /* Redirect browser */
+				header("Location: ../about.php"); /* Redirect browser */
 				
 			} else {
 			//	echo "<p>$pw_hash</p>";
@@ -26,7 +26,7 @@
 		}
 		
 	} else {
-		header("Location: /login.php?redirect=true"); /* Redirect browser */
+		header("Location: ../login.php?redirect=true"); /* Redirect browser */
 		
 	}
 ?>
