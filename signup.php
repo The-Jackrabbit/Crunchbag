@@ -1,22 +1,10 @@
 <?php 
-	if (is_null($_GET["first_name"])) {
-		$_GET["first_name"] = "";
-	}
-	if (is_null($_GET["last_name"])) {
-		$_GET["last_name"] = "";
-	}
-	if (is_null($_GET["email"])) {
-		$_GET["email"] = "";
-	}
-	if (is_null($_GET["username"])) {
-		$_GET["username"] = "";
-	}
-	if (is_null($_GET["address"])) {
-		$_GET["address"] = "";
-	}
-	if (is_null($_GET["city"])) {
-		$_GET["city"] = "";
-	}
+	$_GET["first_name"] = isset($_GET["first_name"]) ? $_GET["first_name"] : '';
+	$_GET["last_name"] = isset($_GET["last_name"]) ? $_GET["last_name"] : '';
+	$_GET["email"] = isset($_GET["email"]) ? $_GET["email"] : '';
+	$_GET["username"] = isset($_GET["username"]) ? $_GET["username"] : '';
+	$_GET["address"] = isset($_GET["address"]) ? $_GET["address"] : '';
+	$_GET["city"] = isset($_GET["city"]) ? $_GET["city"] : '';
 ?>
 <html lang="en">
    <head>
