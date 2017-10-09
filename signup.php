@@ -276,7 +276,7 @@
 						<td>
 							<input required id="city" type="text" name="city" placeholder="Redmond" value=<?php echo "'$_GET[city]'";?>>
 							<?php
-								$text = "Not a valid city";
+								$text = "Cities can only contain letters and certain punctuation (-, spaces,', etc)";
 								include("./Components/errorDialogue/errorDialogue.php");
 							?>
 						</td>
