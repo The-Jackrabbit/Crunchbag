@@ -2,9 +2,13 @@
 	$_GET["first_name"] = isset($_GET["first_name"]) ? $_GET["first_name"] : '';
 	$_GET["last_name"] = isset($_GET["last_name"]) ? $_GET["last_name"] : '';
 	$_GET["email"] = isset($_GET["email"]) ? $_GET["email"] : '';
+	$_GET["email_result"] = isset($_GET["email_result"]) ? $_GET["email_result"] : '';
 	$_GET["username"] = isset($_GET["username"]) ? $_GET["username"] : '';
+	$_GET["username_result"] = isset($_GET["username_result"]) ? $_GET["username_result"] : '';
 	$_GET["address"] = isset($_GET["address"]) ? $_GET["address"] : '';
 	$_GET["city"] = isset($_GET["city"]) ? $_GET["city"] : '';
+	$_GET["zip"] = isset($_GET["zip"]) ? $_GET["zip"] : '';
+
 ?>
 <html lang="en">
    <head>
