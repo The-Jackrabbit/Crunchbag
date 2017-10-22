@@ -11,6 +11,7 @@
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js '></script>
 		<link rel="icon" href="Assets/favicon.ico" />
 		<style>
+			
 			.products-container {
 				min-height: 75vh !important;
 				margin: 0 auto;
@@ -93,6 +94,13 @@
 			.cart-full-item {
 				padding: 12pt;
 			}
+			.checkout-page {
+				height: 50pt;
+				width: 100%;
+			}
+			.checkout-page-button {
+				margin: 0 auto;
+			}
 		</style>
 	</head>
    <body>
@@ -131,54 +139,72 @@
 				}
 			?>
 		</div>
-		<div class='modal'>
-			<div>asdasdas asd as </div>
-			<div>asdasdas asd as </div>
-			<div>asdasdas asd as </div>
-			<div>asdasdas asd as </div>
-		</div>
-		<script src="js/index.js"></script>
-	</div>
-	<div class="cart-icon">
-		<span id="cart-total">1</span>
-		<img src="./Assets/shopping-cart.png" width="30pt" height="30pt">
-	</div>
-	<div class="cart-full" id="cart-full">
-		<div class="cart-full-header" >
-			<span class="cart-full-header-title">Cart</span>
-			<span class="minify" id="minify">-</span>
-		</div>
-		<div id="cart" class="cart-full-body">
+		
+		<form method="POST" action="Helpers/submitPurchase.php" class="hidden-form">
+			<?php
+
+				include("./Helpers/connectToDatabase.php");
+				$items = mysqli_query($con,
+				"SELECT * FROM products; ");
+				include("./Helpers/disconnectFromDatabase.php");
+
+				if ($items->num_rows > 0) {
+					while ($row = $items->fetch_assoc()) {
+						echo "<input type='hidden' name='$row[productId]' class='$row[productId]' value=0>";
+					}
+				}
+			?>
+			<div class="checkout-page">
+			<input class="checkout-page-button" type="submit" value="Checkout">
+			</div>
 			
-		</div>
-		<div class="cart-full-checkout">
-				<input class="checkout" type="submit" value="Checkout">
-		</div>
+			<div class="cart-icon">
+				<span id="cart-total">0</span>
+				<img src="./Assets/shopping-cart.png" width="30pt" height="30pt">
+			</div>
+			<div class="cart-full" id="cart-full">
+				<div class="cart-full-header" >
+					<span class="cart-full-header-title">Cart</span>
+					<span class="minify" id="minify">-</span>
+				</div>
+				<div id="cart" class="cart-full-body">
+					
+				</div>
+				<div class="cart-full-checkout">
+						<input class="checkout" type="submit" value="Checkout">
+				</div>
+			</div>
+		</form>
+		
 	</div>
+
 	<script>
 		$("button").click(function() {
 			$(this).parents('.shop-card').each(function() {
-				console.log(this);
 				var price = 0;
 				var id = 0;
 				var name = '';
 				$(this).find('.hidden-vals').each(function() {
-					console.log(this);
 					id = $(this).find('.id').val();
-					price = $(this).find('.price').val();
+					price = parseInt($(this).find('.price').val());
 					name = $(this).find('.name').val();
 					var item = `
 						<div class='cart-full-item'>
-							<p>1x ` + name + `<span class='cart-price'>` + price + `</span></p>
+							<p>1x ` + name + `<span class='cart-price'>$` + price.toFixed(2) + `</span></p>
 							<hr>
 						</div>
 						`;
 					$("#cart").append(item);
+
+					$('form.hidden-form').find('input.' + id).each(function() {
+						var newVal = parseInt($(this).val()) + 1;
+						$(this).val(newVal);
+					})
 				});
-				$("#cart-full").show();
-				console.log(price);
-				console.log(id);
-				console.log(name);
+			})
+			$('#cart-total').each(function() {
+				var newVal = parseInt($(this).text()) + 1;
+				$(this).text(newVal);
 			})
 		});
 		$(".minify").click(function() {
