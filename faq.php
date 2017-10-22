@@ -1,4 +1,5 @@
 <?php session_start();?>
+<?php include("./Helpers/sessionVariables.php"); ?>
 <html lang="en">
    <head>
       <link rel="stylesheet" href="Assets/reset.css" />
@@ -47,20 +48,7 @@
 	</head>
    <body>
       <?php
-         $pkg = Array(
-               "title" => "CrunchBag",
-					"title_url" => "home.php",
-					"links" => Array(
-						"about.php" => "About",
-						"faq.php" => "FAQ",
-						"purchase.php" => "Purchase"
-					),
-					"activeLink" => "faq.php",
-               "actionLinks" => Array(
-                     "login.php" => "Login",
-                     "signup.php" => "Signup"
-					)
-            );
+         $pkg = $header_pkg;
          include("./Components/header/header.php");
       ?>
 		<div class="max-inline">

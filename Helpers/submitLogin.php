@@ -16,7 +16,7 @@
 				session_start();
 				$_SESSION["userId"] = $row["userId"];
 				$_SESSION["firstName"] = $row["firstName"];
-				$_SESSION["username"] = $row["password"];
+				$_SESSION["username"] = $row["username"];
 				header("Location: ../about.php"); /* Redirect browser */
 				
 			} else {

@@ -1,4 +1,5 @@
 <?php session_start();?>
+<?php include("./Helpers/sessionVariables.php"); ?>
 <html lang="en">
    <head>
       <link rel="stylesheet" href="Assets/reset.css" />
@@ -22,133 +23,172 @@
 			body {
 				background-color: #e0d2cc !important;
 			}
+			.cart-icon {
+				position: fixed;
+				bottom: 20;
+				right: 20;
+			}
+			.cart-icon span {
+				background-color: #B23323;
+				padding: 0pt 5pt;
+				border-radius: 15pt;
+			}
+			.cart-icon img {
+				
+				width: 30pt;
+				height: 30pt;
+				background-color: rgba(200, 200, 200, 0.8);
+				border-radius: 30pt;
+				vertical-align: middle;
+				padding: 5pt;
+				cursor: pointer;
+			}
+			.cart-full {
+				display:none;
+				position: fixed;
+				bottom: 0;
+				right: 20;
+				width: 250pt;
+				height: 280pt;
+				background-color: white;
+				color: black;
+			}
+			.cart-full-header {
+				background-color: #B23323;
+				width: 100%;
+				height: 40pt;
+				vertical-align: middle;
+				
+			}
+			.cart-full-body {
+				width: 100%;
+				height: 200pt;
+				overflow-y: scroll;
+			}
+			.cart-full-header-title {
+				font-size: 12pt;
+				color: black;
+				line-height: 40pt;
+				padding-left:12pt;
+			}
+			.minify {
+				font-size: 24pt;
+				cursor: pointer;
+				line-height: 40pt;
+				padding-right:12pt;
+				float: right;
+				color: black;
+			}
+			.cart-full-checkout {
+				width: 100%;
+				height: 40pt;
+			}
+			input.checkout {
+				float: right;
+				margin-right: 12pt;
+			}
+			.cart-price {
+				float: right;
+			}
+			.cart-full-item {
+				padding: 12pt;
+			}
 		</style>
 	</head>
    <body>
       <?php
-         $pkg = Array(
-               "title" => "CrunchBag",
-					"title_url" => "home.php",
-					"links" => Array(
-						"about.php" => "About",
-						"faq.php" => "FAQ",
-						"purchase.php" => "Purchase"
-					),
-					"activeLink" => "purchase.php",
-               "actionLinks" => Array(
-                     "login.php" => "Login",
-                     "signup.php" => "Signup"
-					)
-            );
+         $pkg = $header_pkg;
          include("./Components/header/header.php");
       ?>
 	<div class="max-inline"> 
 		<div class='products-container'>
-			<div class='shop-card' data-cat='Amazon'>
-				<div class="title">
-				Individual Pile
-				</div>
-				<div class="desc">
-				</div>
-				<div class="product">
-					<img src= "Assets/img/purLeaf.jpg" />
-				</div>
-				<div class='cta'>
-				<div class="price">$50.00</div>
-				<button class="button">Add to cart</button>
-				</div>
-			</div>
+			<?php
 
-			<div class='shop-card' data-cat='Amazon'>
-				<div class="title">
-				Couple's Pile
-				</div>
-				<div class="desc">
-					
-				</div>
-				<div class="product">
-					<img src= "Assets/img/purLeaf.jpg" />
-				</div>
-				<div class='cta'>
-				<div class="price">$80.00</div>
-				<button class="button">Add to cart</button>
-				</div>
-			</div>
+				include("./Helpers/connectToDatabase.php");
+				$items = mysqli_query($con,
+				"SELECT * FROM products; ");
+				include("./Helpers/disconnectFromDatabase.php");
 
-			<div class='shop-card' data-cat='Lenovo'>
-				<div class="title">
-				Family Pile
-				</div>
-				<div class="desc">
-				</div>
-				<div class="product">
-					<img src= "Assets/img/purLeaf.jpg" />
-				</div>
-				<div class='cta'>
-				<div class="price">$150.00</div>
-				<button class="button">Add to cart</button>
-				</div>
-			</div>
-			
-			<div class='shop-card' data-cat='Amazon'>
-				<div class="title">
-				Cinnamon
-				</div>
-				<div class="desc">
-				Optional Scent
-				</div>
-				<div class="product">
-					<img src= "Assets/img/Cinn.jpg" />
-				</div>
-				<div class='cta'>
-				<div class="price">$25.00</div>
-				<button class="button">Add to cart</button>
-				</div>
-			</div>
-			
-			<div class='shop-card' data-cat='Lenovo'>
-				<div class="title">
-				Chai
-				</div>
-				<div class="desc">
-				Optional Scent
-				</div>
-				<div class="product">
-					<img src= "Assets/img/Chai.jpg" />
-				</div>
-				<div class='cta'>
-				<div class="price">$25.00</div>
-				<button class="button">Add to cart</button>
-				</div>
-			</div>
-			
-			<div class='shop-card'>
-				<div class="title">
-				Pumpkin Spice
-				</div>
-				<div class="desc">
-				Optional Scent
-				</div>
-				<div class="product">
-					<img src= "Assets/img/PSL.jpg" />
-				</div>
-				<div class='cta'>
-				<div class="price">$25.00</div>
-				<button class="button">Add to cart</button>
-				</div>
-			</div>
-			
+				if ($items->num_rows > 0) {
+					while ($row = $items->fetch_assoc()) {
+						echo "<div class='shop-card'>";
+						echo "<div class='hidden-vals' style='display: none'>
+							<input type='hidden' class='id' name='id' value='$row[productId]'>
+							<input type='hidden' class='name' name='name' value='$row[productName]'>
+							<input type='hidden' class='price' name='price' value='$row[price]'>
+						</div>";
+						echo "<div class='title'>$row[productName]</div>";
+						echo "<div class='desc'>$row[productDescription]</div>";
+						echo "<div class='product'>
+									<img src='$row[productImage]'/>
+								</div>";
+
+						echo "<div class='cta'>";
+						echo "<div class='price'>$".number_format($row['price'], 2)."</div>";
+						echo "<button class='button'>Add to cart</button></div>";
+						echo "</div>";
+					}
+				}
+			?>
 		</div>
-
 		<div class='modal'>
 			<div>asdasdas asd as </div>
 			<div>asdasdas asd as </div>
 			<div>asdasdas asd as </div>
 			<div>asdasdas asd as </div>
 		</div>
-  		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-   	<script  src="js/index.js"></script>
+		<script src="js/index.js"></script>
 	</div>
+	<div class="cart-icon">
+		<span id="cart-total">1</span>
+		<img src="./Assets/shopping-cart.png" width="30pt" height="30pt">
+	</div>
+	<div class="cart-full" id="cart-full">
+		<div class="cart-full-header" >
+			<span class="cart-full-header-title">Cart</span>
+			<span class="minify" id="minify">-</span>
+		</div>
+		<div id="cart" class="cart-full-body">
+			
+		</div>
+		<div class="cart-full-checkout">
+				<input class="checkout" type="submit" value="Checkout">
+		</div>
+	</div>
+	<script>
+		$("button").click(function() {
+			$(this).parents('.shop-card').each(function() {
+				console.log(this);
+				var price = 0;
+				var id = 0;
+				var name = '';
+				$(this).find('.hidden-vals').each(function() {
+					console.log(this);
+					id = $(this).find('.id').val();
+					price = $(this).find('.price').val();
+					name = $(this).find('.name').val();
+					var item = `
+						<div class='cart-full-item'>
+							<p>1x ` + name + `<span class='cart-price'>` + price + `</span></p>
+							<hr>
+						</div>
+						`;
+					$("#cart").append(item);
+				});
+				$("#cart-full").show();
+				console.log(price);
+				console.log(id);
+				console.log(name);
+			})
+		});
+		$(".minify").click(function() {
+			console.log("hidisha");
+			$(this).parents(".cart-full").slideToggle();
+		})
+		$(".cart-icon").click(function() {
+			$("#cart-full").slideToggle();
+		})
+	</script>
 	<?php include("./Components/footer/footer.php");?>
    </body>
 </html>

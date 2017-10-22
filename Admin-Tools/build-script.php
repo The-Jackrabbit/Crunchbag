@@ -85,6 +85,66 @@
 		'Virginia'
 	);");
 	
+	mysqli_query($con, "DROP TABLE IF EXISTS products;");
+	mysqli_query($con, "CREATE TABLE products(
+		productId SERIAL PRIMARY KEY,
+		price DOUBLE PRECISION,
+		productName varchar(500),
+		productImage varchar(1000),
+		productDescription varchar(1000)
+	);");
+	mysqli_query($con,"INSERT INTO products(
+		price,
+		productName,
+		productImage,
+		productDescription
+	)
+	VALUES (
+		50.00,
+		'Individual Pile',
+		'Assets/img/purLeaf.jpg',
+		''
+	),
+	(
+		80.00,
+		'Couple\'s Pile',
+		'Assets/img/purLeaf.jpg',
+		''
+	),
+	(
+		150.00,
+		'Family Pile',
+		'Assets/img/purLeaf.jpg',
+		''
+	),
+	(
+		25.00,
+		'Cinnamon',
+		'Assets/img/Cinn.jpg',
+		'Optional Scent'
+	),
+	(
+		25.00,
+		'Chai',
+		'Assets/img/Chai.jpg',
+		'Optional Scent'
+	),
+	(
+		25.00,
+		'Pumpkin Spice',
+		'Assets/img/PSL.jpg',
+		'Optional Scent'
+	);");
 	
+
+	mysqli_query($con, "DROP TABLE IF EXISTS transactionLog;");
+	mysqli_query($con, "CREATE TABLE transactionLog(
+		transactionId SERIAL PRIMARY KEY,
+		transactionDate TIMESTAMP,
+		transactionBy integer,
+		transactionAmount DOUBLE PRECISION,
+		bitcoinSource varchar(1000),
+		bitcoinTarget varchar(1000)
+	);");
 	mysqli_close($con);
 ?>
