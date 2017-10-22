@@ -170,7 +170,7 @@
 					</p>
 					<p class="banner-text">
 					<?php
-						if (!is_null($_SESSION['firstName'])) {
+						if (isset($_SESSION['firstName'])) {
 							echo "Welcome back, $_SESSION[firstName]";
 						}
 					?>

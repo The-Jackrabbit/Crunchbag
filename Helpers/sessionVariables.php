@@ -13,7 +13,7 @@ $header_pkg = Array(
 			"signup.php" => "Signup"
 	)
 );
-if (!is_null($_SESSION['username'])) {
+if (isset($_SESSION['username'])) {
 	$header_pkg = Array(
 		"title" => "CrunchBag",
 		"title_url" => "home.php",
