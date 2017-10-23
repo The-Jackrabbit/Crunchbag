@@ -140,7 +140,7 @@
 			?>
 		</div>
 		
-		<form method="POST" action="Helpers/submitPurchase.php" class="hidden-form">
+		<form method="POST" action="purchaseConfirmation.php" class="hidden-form">
 			<?php
 
 				include("./Helpers/connectToDatabase.php");

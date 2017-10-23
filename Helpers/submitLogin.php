@@ -17,6 +17,7 @@
 				$_SESSION["userId"] = $row["userId"];
 				$_SESSION["firstName"] = $row["firstName"];
 				$_SESSION["username"] = $row["username"];
+				$_SESSION["email"] = $row["email"];
 				header("Location: ../about.php"); /* Redirect browser */
 				
 			} else {
