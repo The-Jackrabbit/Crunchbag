@@ -42,11 +42,15 @@
 			'$_POST[zip]',
 			'$_POST[state]'
 		);");
+		include("./disconnectFromDatabase.php");
+		$target_email = $_POST['email'];
+		$username = $_POST['username'];
+		include("./signupMail.php");
 		header("Location: ../signupConfirmation.php");
 	}
 	
 	include("./disconnectFromDatabase.php");
-
+	
 	//header("Location: /home.php");
 	exit;
 ?>
