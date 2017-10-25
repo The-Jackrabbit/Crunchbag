@@ -62,13 +62,12 @@
 							<td class="kermit">
 								<img src="Assets/img/Kermit.jpg" alt="image">
 							</td>
-							<td class="text">
-								<p> Thank you for joining the mission toward more enjoyable leafpile fun all year round! We hope you take the time to explore the options presented to you as a member of CrunchBag and indulge in a life changing order, you won't be disapointed! </p>
-								<p> As a member you may enjoy: </p>
+							<td class="text" style = "vertical-align: middle">
+								<p style="font-weight: bold"> Thank you for your CrunchBag purchase! Ret ready for the crunchy fun! </p>
 								<ul class="leaf">
-									<li>Exclusive information regarding promotions and discounts</li>
-									<li>Updated release dates for new scents and products. </li>
-									<li>The opportunity to give your opinion on potential new updates to our system. </li>
+									<li>We will ship your CrunchBag in less than 5 business days. </li>
+									<li>Check your email for a confirmation!</li>
+									<li>Contact Us if you have any questions about your order! </li>
 								</ul>
 							</td>
 						</tr>
