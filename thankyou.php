@@ -7,19 +7,11 @@
       <link rel="stylesheet" href="Assets/reset.css" />
       <link rel="stylesheet" href="Assets/styles.css" />
 		<link rel="icon" href="Assets/favicon.ico" />
+		<script src="Assets/jquery.min.js"></script>
 		<style>
 			.confirmHeader {
 				font-size: 27px;
 				margin: 20px;
-			}
-			.text-container {
-				text-align: center;
-				width: 50%;
-				height: 100%;
-				padding-right: 12pt;
-			}
-			.text {
-				height: 25%;
 			}
 			.text ul {
 				padding: 10pt 0pt;
@@ -40,8 +32,20 @@
 				padding-left: 5pt;
 				line-height: 20px;
 			}
+			td.kermit img {
+				max-width: 300pt;
+			}
+			table.confirmation-graphic p {
+				line-height: 20pt;
+			}
+			table.confirmation-graphic td {
+				vertical-align: top;
+			}
+			td.text {
+				padding-left: 24pt;
+			}
 		</style>
-		<script src="Assets/jquery.min.js"></script>
+		
 		
 	</head>
    <body>
@@ -53,24 +57,22 @@
 		
 			<div class="confirmHeader">Thanks for your purchase!</div>
 				<div class= "confirm-section">
-					<div class="text-container">
-						<table style="text-align: center;">
-							<tr>
-								<td style="text-align: center;">
-									<img src="Assets/img/Kermit.jpg" ALT="image">
-								</td>
-								<td class="text">
-									<p style="line-height: 20pt;"> Thank you for joining the mission toward more enjoyable leafpile fun all year round! We hope you take the time to explore the options presented to you as a member of CrunchBag and indulge in a life changing order, you won't be disapointed! </p>
-									<p style="line-height: 20pt;"> As a member you may enjoy: </p>
-									<ul class="leaf">
-										<li>Exclusive information regarding promotions and discounts</li>
-										<li>Updated release dates for new scents and products. </li>
-										<li>The opportunity to give your opinion on potential new updates to our system. </li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-					</div>
+					<table class="confirmation-graphic">
+						<tr>
+							<td class="kermit">
+								<img src="Assets/img/Kermit.jpg" alt="image">
+							</td>
+							<td class="text">
+								<p> Thank you for joining the mission toward more enjoyable leafpile fun all year round! We hope you take the time to explore the options presented to you as a member of CrunchBag and indulge in a life changing order, you won't be disapointed! </p>
+								<p> As a member you may enjoy: </p>
+								<ul class="leaf">
+									<li>Exclusive information regarding promotions and discounts</li>
+									<li>Updated release dates for new scents and products. </li>
+									<li>The opportunity to give your opinion on potential new updates to our system. </li>
+								</ul>
+							</td>
+						</tr>
+					</table>
 				</div>
 			</div>
 			
