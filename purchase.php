@@ -102,13 +102,21 @@
 				margin: 0 auto;
 			}
 			.actions input {
-				color: white;
 				border: none !important;
 				width: 200pt;
-				height: 50pt;
-				margin: 12pt;
+				display: block;
 				font-size: 18pt;
-				background-color: #7A1906  !important;
+				margin: 12pt;
+			}
+			.actions input.about {
+				color: white;
+				height: 50pt;
+				background-color: #7A1906 ;
+			}
+			.actions input.email {
+				color: black;
+				height: 30pt;
+				background-color: white;
 			}
 			.actions {
 				width: min-content; width: -moz-min-content;
@@ -172,6 +180,11 @@
 				}
 			?>
 			<div class="actions">
+				<?php
+					if(!isset($_SESSION["email"])) {
+						echo '<input class="email" required type="text" name="email" value="" placeholder="Your email">';
+					}
+				?>
 				<input class="about" type="submit" value="Checkout">
 				
 			</div>

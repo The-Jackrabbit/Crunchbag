@@ -1,20 +1,44 @@
 <?php
 	session_start();
 	$target_email = $_SESSION['email'];
-	$username = $_SESSION['username'];
+	$total = 0;
+	$email_username = "Valued anonymous customer";
+	if (isset($_SESSION["sum"])) {
+		$total = $_SESSION["sum"];
+	}
+	if(isset($_SESSION["username"])) {
+		$email_username = $_SESSION['username'];
+	}
+	
 	
 	include("./connectToDatabase.php");
-	$pending_purchase_query = mysqli_query($con,"SELECT *
-	FROM transactionLog
-	WHERE transactionEnd = '3001-01-01'
-	AND transactionBy = $_SESSION[userId];");
-	if ($pending_purchase_query->num_rows > 0) {
-		mysqli_query($con,"UPDATE
-		transactionLog
-		SET transactionEnd = Now()
+	if (isset($_SESSION["userId"])) {
+		$pending_purchase_query = mysqli_query($con,"SELECT *
+		FROM transactionLog
 		WHERE transactionEnd = '3001-01-01'
 		AND transactionBy = $_SESSION[userId];");
+		if ($pending_purchase_query->num_rows > 0) {
+			mysqli_query($con,"UPDATE
+			transactionLog
+			SET transactionEnd = Now()
+			WHERE transactionEnd = '3001-01-01'
+			AND transactionBy = $_SESSION[userId];");
+		}
+	} else {
+		$id = session_id();
+		$pending_purchase_query = mysqli_query($con,"SELECT *
+		FROM transactionLog
+		WHERE transactionEnd = '3001-01-01'
+		AND transactionBy = '$id';");
+		if ($pending_purchase_query->num_rows > 0) {
+			mysqli_query($con,"UPDATE
+			transactionLog
+			SET transactionEnd = Now()
+			WHERE transactionEnd = '3001-01-01'
+			AND transactionBy = '$id';");
+		}
 	}
+	
 	
 	include("./disconnectFromDatabase.php");
 	include("./purchaseMail.php");

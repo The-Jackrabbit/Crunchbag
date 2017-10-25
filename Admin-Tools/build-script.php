@@ -143,7 +143,7 @@
 		transactionDate TIMESTAMP,
 		transactionStart DATETIME,
 		transactionEnd DATETIME,
-		transactionBy integer,
+		transactionBy varchar(1000),
 		transactionAmount DOUBLE PRECISION,
 		bitcoinSource varchar(1000),
 		bitcoinTarget varchar(1000)

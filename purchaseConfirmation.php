@@ -1,5 +1,7 @@
 <?php session_start();?>
-<?php include("./Helpers/sessionVariables.php"); ?>
+<?php include("./Helpers/sessionVariables.php"); 
+	
+?>
 
 <html lang="en">
    <head>
@@ -76,36 +78,69 @@
 					<label>Total: </label><?php echo "$".number_format($sum, 2);?>
 				</span>
 				<?php
+					$_SESSION["sum"] = $sum;
 					$sum = 0.30;
+
 					include("./Helpers/connectToDatabase.php");
-					$pending_purchase_query = mysqli_query($con,"SELECT *
-					FROM transactionLog
-					WHERE transactionEnd = '3001-01-01'
-					AND transactionBy = $_SESSION[userId];");
-					if ($pending_purchase_query->num_rows == 0) {
-						mysqli_query($con,"INSERT INTO transactionLog(
-							transactionDate,
-							transactionStart,
-							transactionEnd,
-							transactionBy,
-							transactionAmount,
-							bitcoinSource,
-							bitcoinTarget
-						)
-						VALUES (
-							Now(),
-							Now(),
-							'3001-01-01',
-							$_SESSION[userId],
-							$sum,
-							'$_SESSION[email]',
-							'crunchbag.uva@gmail.com'
-						);");
+					if (isset($_SESSION["userId"])) {
+						$pending_purchase_query = mysqli_query($con,"SELECT *
+						FROM transactionLog
+						WHERE transactionEnd = '3001-01-01'
+						AND transactionBy = $_SESSION[userId];");
+						if ($pending_purchase_query->num_rows == 0) {
+							mysqli_query($con,"INSERT INTO transactionLog(
+								transactionDate,
+								transactionStart,
+								transactionEnd,
+								transactionBy,
+								transactionAmount,
+								bitcoinSource,
+								bitcoinTarget
+							)
+							VALUES (
+								Now(),
+								Now(),
+								'3001-01-01',
+								'$_SESSION[username]',
+								$sum,
+								'$_SESSION[email]',
+								'crunchbag.uva@gmail.com'
+							);");
+						}
+					} else {
+						$id = session_id();
+						$pending_purchase_query = mysqli_query($con,"SELECT *
+						FROM transactionLog
+						WHERE transactionEnd = '3001-01-01'
+						AND transactionBy = '$id';");
+						if ($pending_purchase_query->num_rows == 0) {
+							mysqli_query($con,"INSERT INTO transactionLog(
+								transactionDate,
+								transactionStart,
+								transactionEnd,
+								transactionBy,
+								transactionAmount,
+								bitcoinSource,
+								bitcoinTarget
+							)
+							VALUES (
+								Now(),
+								Now(),
+								'3001-01-01',
+								'$id',
+								$sum,
+								'$_SESSION[email]',
+								'crunchbag.uva@gmail.com'
+							);");
+						}
+						
 					}
+					
 					
 					include("./Helpers/disconnectFromDatabase.php");
 				?>
 				<form action="https://test.bitpay.com/checkout" method="post" >
+					
   					<input type="hidden" name="action" value="checkout" />
   					<input type="hidden" name="posData" value="" />
 					<input type="hidden" name="price" value="<?php echo $sum;?>" />

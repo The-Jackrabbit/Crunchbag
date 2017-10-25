@@ -16,7 +16,6 @@
 	$email_result = ($email_check->num_rows > 0 ? true : false);
 	
 	if ($username_result || $email_result) {
-		//echo "taken";
 		header("Location: ../signup.php?username_result=$username_result&username=$_POST[username]&email_result=$email_result&email=$_POST[email]&zip=$_POST[zip]&address=$_POST[address]&city=$_POST[city]&first_name=$_POST[first_name]&last_name=$_POST[last_name]");
 	} else {
 		$pw = password_hash($_POST["password"], PASSWORD_DEFAULT);
@@ -44,7 +43,7 @@
 		);");
 		include("./disconnectFromDatabase.php");
 		$target_email = $_POST['email'];
-		$username = $_POST['username'];
+		$email_username = $_POST['username'];
 		include("./signupMail.php");
 		header("Location: ../signupConfirmation.php");
 	}
