@@ -101,6 +101,23 @@
 			.checkout-page-button {
 				margin: 0 auto;
 			}
+			.actions input {
+				color: white;
+				border: none !important;
+				width: 200pt;
+				height: 50pt;
+				margin: 12pt;
+				font-size: 18pt;
+				background-color: #7A1906  !important;
+			}
+			.actions {
+				width: min-content; width: -moz-min-content;
+				white-space: nowrap;
+				margin: 0 auto;
+			}
+			.actions * {
+				display: inline-block;
+			}
 		</style>
 	</head>
    <body>
@@ -140,7 +157,7 @@
 			?>
 		</div>
 		
-		<form method="POST" action="purchaseConfirmation.php" class="hidden-form">
+		<form method="POST" action="./Helpers/submitPurchase.php" class="hidden-form">
 			<?php
 
 				include("./Helpers/connectToDatabase.php");
@@ -154,10 +171,11 @@
 					}
 				}
 			?>
-			<div class="checkout-page">
-			<input class="checkout-page-button" type="submit" value="Checkout">
+			<div class="actions">
+				<input class="about" type="submit" value="Checkout">
+				
 			</div>
-			
+
 			<div class="cart-icon">
 				<span id="cart-total">0</span>
 				<img src="./Assets/shopping-cart.png" width="30pt" height="30pt">
@@ -171,7 +189,7 @@
 					
 				</div>
 				<div class="cart-full-checkout">
-						<input class="checkout" type="submit" value="Checkout">
+					<input class="checkout" type="submit" value="Checkout">
 				</div>
 			</div>
 		</form>

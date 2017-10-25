@@ -1,3 +1,5 @@
+<?php session_start();?>
+<?php include("./Helpers/sessionVariables.php"); ?>
 <?php 
 	$_GET["first_name"] = isset($_GET["first_name"]) ? $_GET["first_name"] : '';
 	$_GET["last_name"] = isset($_GET["last_name"]) ? $_GET["last_name"] : '';
@@ -8,7 +10,6 @@
 	$_GET["address"] = isset($_GET["address"]) ? $_GET["address"] : '';
 	$_GET["city"] = isset($_GET["city"]) ? $_GET["city"] : '';
 	$_GET["zip"] = isset($_GET["zip"]) ? $_GET["zip"] : '';
-
 ?>
 <html lang="en">
    <head>
@@ -143,20 +144,7 @@
 	</head>
    <body>
 		<?php
-         $pkg = Array(
-               "title" => "CrunchBag",
-					"title_url" => "home.php",
-					"links" => Array(
-						"about.php" => "About",
-						"faq.php" => "FAQ",
-						"purchase.php" => "Purchase"
-					),
-					"activeLink" => "",
-               "actionLinks" => Array(
-                     "login.php" => "Login",
-                     "signup.php" => "Signup"
-					)
-            );
+         $pkg = $header_pkg;
          include("./Components/header/header.php");
 		?>
 		<div class="login-banner">	

@@ -1,5 +1,5 @@
 <?php
-
-echo "$_SESSION";
-
+session_start();
+print_r($_SESSION);
+echo $_SESSION;
 ?>

@@ -1,15 +1,5 @@
-<?php 
-	$_GET["first_name"] = isset($_GET["first_name"]) ? $_GET["first_name"] : '';
-	$_GET["last_name"] = isset($_GET["last_name"]) ? $_GET["last_name"] : '';
-	$_GET["email"] = isset($_GET["email"]) ? $_GET["email"] : '';
-	$_GET["email_result"] = isset($_GET["email_result"]) ? $_GET["email_result"] : '';
-	$_GET["username"] = isset($_GET["username"]) ? $_GET["username"] : '';
-	$_GET["username_result"] = isset($_GET["username_result"]) ? $_GET["username_result"] : '';
-	$_GET["address"] = isset($_GET["address"]) ? $_GET["address"] : '';
-	$_GET["city"] = isset($_GET["city"]) ? $_GET["city"] : '';
-	$_GET["zip"] = isset($_GET["zip"]) ? $_GET["zip"] : '';
-
-?>
+<?php session_start();?>
+<?php include("./Helpers/sessionVariables.php"); ?>
 <html lang="en">
    <head>
       <link rel="stylesheet" href="Assets/reset.css" />
@@ -43,11 +33,15 @@
 				background-color: white;
 				box-shadow: 4pt 4pt 4pt grey;
 				padding: 12pt;
+				height: min-content;
 			}
 			ul.leaf {
 				list-style-image: url('Assets/img/leafbullet.png');
 				padding-left: 5pt;
 				line-height: 20px;
+			}
+			.child-image {
+				width: 100%;
 			}
 		</style>
 		<script src="Assets/jquery.min.js"></script>
@@ -55,27 +49,14 @@
 	</head>
    <body>
 		<?php
-         $pkg = Array(
-               "title" => "CrunchBag",
-					"title_url" => "home.php",
-					"links" => Array(
-						"about.php" => "About",
-						"faq.php" => "FAQ",
-						"purchase.php" => "Purchase"
-					),
-					"activeLink" => "",
-               "actionLinks" => Array(
-                     "login.php" => "Login",
-                     "signup.php" => "Signup"
-					)
-            );
+         $pkg = $header_pkg;
          include("./Components/header/header.php");
 		?>
 		<div class="max-inline">
 			<div class="confirmHeader">Welcome to CrunchBag!</div>
 			<div class= "confirm-section">
 			<td class="text-container">
-				<div style="text-align: center;"><img src="Assets/img/fall.png" ALT="image"></div>
+				<div style="text-align: center;"><img src="Assets/img/fall.png" ALT="image" class="child-image"></div>
 							<div class="text">
 								<p style="line-height: 20pt;"> Thank you for joining the mission toward more enjoyable leafpile fun all year round! We hope you take the time to explore the options presented to you as a member of CrunchBag and indulge in a life changing order, you won't be disapointed! </p>
 								<p style="line-height: 20pt;"> As a member you may enjoy: </p>

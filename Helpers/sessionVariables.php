@@ -24,8 +24,8 @@ if (isset($_SESSION['username'])) {
 		),
 		"activeLink" => "",
 		"actionLinks" => Array(
-				"cart.php" => "Cart",
-				"logout.php" => "Logout"
+			"purchaseConfirmation.php" => "Cart",
+			"logout.php" => "Logout"
 		)
 	);
 }

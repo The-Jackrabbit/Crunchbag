@@ -45,25 +45,28 @@
 				<?php
 					$sum = 0;
 					include("./Helpers/connectToDatabase.php");
-					foreach($_POST as $key => $value) {
-						$items = mysqli_query($con,
-						"SELECT * FROM products
-						WHERE productId=$key; ");
-						
-						if ($items->num_rows > 0) {
-							while ($row = $items->fetch_assoc()) {
-								$sum = $sum + $value*$row['price'];
-								if ($value > 0) {
-									echo "<div class='cart-confirmation-item'>
-												<span class='cart-item-desc'>".$value."x $row[productName]</span>
-												<span class='cart-item-cost'>$".number_format($value*$row['price'], 2)."</span>
-											</div>
-											<hr>";
+					if (isset($_SESSION["cart"])) {
+						foreach($_SESSION["cart"] as $key => $value) {
+							$items = mysqli_query($con,
+							"SELECT * FROM products
+							WHERE productId=$key; ");
+							
+							if ($items->num_rows > 0) {
+								while ($row = $items->fetch_assoc()) {
+									$sum = $sum + $value*$row['price'];
+									if ($value > 0) {
+										echo "<div class='cart-confirmation-item'>
+													<span class='cart-item-desc'>".$value."x $row[productName]</span>
+													<span class='cart-item-cost'>$".number_format($value*$row['price'], 2)."</span>
+												</div>
+												<hr>";
+									}
+									
 								}
-								
 							}
 						}
 					}
+					
 				?>
 
 			</div>
