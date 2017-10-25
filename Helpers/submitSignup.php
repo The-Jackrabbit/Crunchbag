@@ -42,9 +42,13 @@
 			'$_POST[state]'
 		);");
 		include("./disconnectFromDatabase.php");
+
+
 		$target_email = $_POST['email'];
 		$email_username = $_POST['username'];
-		include("./signupMail.php");
+		include("/Helpers/signupMail.php");
+
+		
 		header("Location: ../signupConfirmation.php");
 	}
 	
