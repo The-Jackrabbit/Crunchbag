@@ -141,6 +141,8 @@
 	mysqli_query($con, "CREATE TABLE transactionLog(
 		transactionId SERIAL PRIMARY KEY,
 		transactionDate TIMESTAMP,
+		transactionStart DATETIME,
+		transactionEnd DATETIME,
 		transactionBy integer,
 		transactionAmount DOUBLE PRECISION,
 		bitcoinSource varchar(1000),

@@ -77,6 +77,33 @@
 				</span>
 				<?php
 					$sum = 0.30;
+					include("./Helpers/connectToDatabase.php");
+					$pending_purchase_query = mysqli_query($con,"SELECT *
+					FROM transactionLog
+					WHERE transactionEnd = '3001-01-01'
+					AND transactionBy = $_SESSION[userId];");
+					if ($pending_purchase_query->num_rows == 0) {
+						mysqli_query($con,"INSERT INTO transactionLog(
+							transactionDate,
+							transactionStart,
+							transactionEnd,
+							transactionBy,
+							transactionAmount,
+							bitcoinSource,
+							bitcoinTarget
+						)
+						VALUES (
+							Now(),
+							Now(),
+							'3001-01-01',
+							$_SESSION[userId],
+							$sum,
+							'$_SESSION[email]',
+							'crunchbag.uva@gmail.com'
+						);");
+					}
+					
+					include("./Helpers/disconnectFromDatabase.php");
 				?>
 				<form action="https://test.bitpay.com/checkout" method="post" >
   					<input type="hidden" name="action" value="checkout" />
