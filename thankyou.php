@@ -63,7 +63,7 @@
 								<img src="Assets/img/Kermit.jpg" alt="image">
 							</td>
 							<td class="text" style = "vertical-align: middle">
-								<p style="font-weight: bold"> Thank you for your CrunchBag purchase! Ret ready for the crunchy fun! </p>
+								<p style="font-weight: bold"> Thank you for your CrunchBag purchase! Get ready for the crunchy fun - your friends will be green with envy (note the Kermit reference)! </p>
 								<ul class="leaf">
 									<li>We will ship your CrunchBag in less than 5 business days. </li>
 									<li>Check your email for a confirmation!</li>
