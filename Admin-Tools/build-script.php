@@ -55,7 +55,7 @@
 		'Luke',
 		'Masters',
 		'luke',
-		'musicdddddddddddude97@gmail.com',
+		'musicdude97@gmail.com',
 		'$pw',
 		'7518 Quigg Street',
 		'Charlottesville',

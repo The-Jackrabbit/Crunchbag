@@ -1,8 +1,5 @@
 <?php
 	session_start();
-	$target_email = $_SESSION['email'];
-	$username = $_SESSION['username'];
-	include("./Helpers/purchaseMail.php");
 	include("./Helpers/sessionVariables.php");
 ?>
 <html lang="en">
@@ -53,25 +50,29 @@
          include("./Components/header/header.php");
 		?>
 		<div class="max-inline">
+		
 			<div class="confirmHeader">Thanks for your purchase!</div>
-			<div class= "confirm-section">
-			<div class="text-container">
-			<table style="text-align: center;">
-				<tr>
-				<td style="text-align: center;"><img src="Assets/img/Kermit.jpg" ALT="image"></td>
-							<td class="text">
-								<p style="line-height: 20pt;"> Thank you for joining the mission toward more enjoyable leafpile fun all year round! We hope you take the time to explore the options presented to you as a member of CrunchBag and indulge in a life changing order, you won't be disapointed! </p>
-								<p style="line-height: 20pt;"> As a member you may enjoy: </p>
-								<ul class="leaf">
-									<li>Exclusive information regarding promotions and discounts</li>
-									<li>Updated release dates for new scents and products. </li>
-									<li>The opportunity to give your opinion on potential new updates to our system. </li>
-								</ul>
-							</td>
-				</tr>
-			<table>
-						</div>
-						</div>
+				<div class= "confirm-section">
+					<div class="text-container">
+						<table style="text-align: center;">
+							<tr>
+								<td style="text-align: center;">
+									<img src="Assets/img/Kermit.jpg" ALT="image">
+								</td>
+								<td class="text">
+									<p style="line-height: 20pt;"> Thank you for joining the mission toward more enjoyable leafpile fun all year round! We hope you take the time to explore the options presented to you as a member of CrunchBag and indulge in a life changing order, you won't be disapointed! </p>
+									<p style="line-height: 20pt;"> As a member you may enjoy: </p>
+									<ul class="leaf">
+										<li>Exclusive information regarding promotions and discounts</li>
+										<li>Updated release dates for new scents and products. </li>
+										<li>The opportunity to give your opinion on potential new updates to our system. </li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
 			
 		</div>
 		
