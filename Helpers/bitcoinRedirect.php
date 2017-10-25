@@ -1,6 +1,8 @@
 <?php
 	session_start();
-	$target_email = $_SESSION['email'];
+	if (isset($_SESSION["email"])) {
+		$target_email = $_SESSION['email'];
+	}
 	$total = 0;
 	$email_username = "Valued anonymous customer";
 	if (isset($_SESSION["sum"])) {
