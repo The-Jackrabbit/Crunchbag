@@ -79,7 +79,6 @@
 				</span>
 				<?php
 					$_SESSION["sum"] = $sum;
-					$sum = 0.30;
 
 					include("./Helpers/connectToDatabase.php");
 					if (isset($_SESSION["userId"])) {
