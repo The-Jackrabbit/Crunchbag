@@ -46,7 +46,7 @@
 
 		$target_email = $_POST['email'];
 		$email_username = $_POST['username'];
-		include("/Helpers/signupMail.php");
+		include("./signupMail.php");
 
 		
 		header("Location: ../signupConfirmation.php");

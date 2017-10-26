@@ -40,9 +40,17 @@
 			AND transactionBy = '$id';");
 		}
 	}
+	foreach ($_SESSION['cart'] as $key=>$value) {
+		$_SESSION['cart'][$key] = 0;
+	}
 	
 	
 	include("./disconnectFromDatabase.php");
 	include("./purchaseMail.php");
 	header("Location: ../thankyou.php");
 ?>
+<?php
+
+				
+				
+			?>

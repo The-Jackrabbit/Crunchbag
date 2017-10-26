@@ -5,8 +5,8 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 require '../vendor/phpmailer/phpmailer/src/Exception.php';
-require '/vendor/phpmailer/phpmailer/src/phpmailer.php';
-require '/vendor/phpmailer/phpmailer/src/SMTP.php';
+require '../vendor/phpmailer/phpmailer/src/phpmailer.php';
+require '../vendor/phpmailer/phpmailer/src/SMTP.php';
 //Load composer's autoloader
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
