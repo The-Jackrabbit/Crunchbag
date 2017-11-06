@@ -16,15 +16,16 @@ $header_pkg = Array(
 if (isset($_SESSION['username'])) {
 	$header_pkg = Array(
 		"title" => "CrunchBag",
-		"title_url" => "home.php",
+		"title_url" => "dashboard.php",
 		"links" => Array(
-			"about.php" => "About",
-			"faq.php" => "FAQ",
+			"dashboard.php" => "Dash",
 			"purchase.php" => "Purchase"
+			
 		),
 		"activeLink" => "",
 		"actionLinks" => Array(
 			"purchaseConfirmation.php" => "Cart",
+			"settings.php" => "Settings",
 			"logout.php" => "Logout"
 		)
 	);

@@ -1,0 +1,68 @@
+<script>
+	$.fn.toggleErrorMessage = function(condition) {
+		var state = $(this).siblings('#error-dialogue').css("display");
+		if (condition) {
+			if (state === "none") {
+				$(this).siblings('#error-dialogue').slideToggle();
+			}
+		}
+		else {
+			if (state !== "none") {
+				$(this).siblings('#error-dialogue').slideToggle();
+			}
+		}
+	}
+	$('form input').keyup(function() {
+		var input_id = $(this).attr("id");
+		var num_pattern = /[0-9]/;
+		var sym_pattern = /[!@#$%^&*();:.\/]/;
+		var user_pattern = /^(?=.{5,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+/;//
+		
+		if (input_id === "first_name" || input_id === "last_name") {
+			var num_test = !num_pattern.test($(this).val());
+			var sym_test = !sym_pattern.test($(this).val());
+			$(this).toggleErrorMessage(!(num_test && sym_test));
+			
+		}
+	});
+	$('form input#email').change(function() {
+		var email_pattern = /[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.][a-zA-Z0-9]+/;
+		var email_test = email_pattern.test($(this).val());
+		$(this).toggleErrorMessage(!(email_test));	
+	});
+	$('form input#zip').change(function() {
+		var zip_pattern = /[^0-9]/;
+		var zip_strict_pattern = /^\d{5}(?:[-\s]\d{4})?$/;
+		var zip_test = zip_pattern.test($(this).val());
+		var zip_test_strict = !(zip_strict_pattern.test($(this).val()));
+		$(this).toggleErrorMessage(zip_test_strict);
+	});
+	$('form input#address').change(function() {
+		var address_pattern = /^[a-zA-Z0-9\s,.'-]*$/;
+		var address_test = address_pattern.test($(this).val());
+		$(this).toggleErrorMessage(!address_test);
+	});
+	$('form input#username').change(function() {
+		var user_pattern = /^(?=.{5,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+/;//
+		
+		var user_test = user_pattern.test($(this).val());
+		$(this).toggleErrorMessage(!user_test);
+	});
+
+	$("form#password-change").submit(function() {
+		// MATCHING PASSWORDS
+		var password = $('#password').val();
+		var confirmedPassword = $('#password-confirmation').val();
+		if (password !== confirmedPassword){
+			$('#password-mismatch').slideToggle();
+			
+			return false;
+		}
+		
+	});
+	$('form input#city').change(function() {
+		var city_pattern = /^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$/;
+		var city_test = city_pattern.test($(this).val());
+		$(this).toggleErrorMessage(!city_test);
+	});
+</script>

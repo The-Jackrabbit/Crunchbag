@@ -5,7 +5,7 @@
 	}
 	foreach($_POST as $key => $value) {
 		if ($key != "email") {
-			$_SESSION["cart"][$key] = $value;
+			$_SESSION["cart"][$key] += $value;
 			
 		}
 		

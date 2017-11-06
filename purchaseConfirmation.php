@@ -49,101 +49,43 @@
 					include("./Helpers/connectToDatabase.php");
 					if (isset($_SESSION["cart"])) {
 						foreach($_SESSION["cart"] as $key => $value) {
-							$items = mysqli_query($con,
-							"SELECT * FROM products
-							WHERE productId=$key; ");
+							$items = mysqli_query($con,"
+								SELECT * FROM products
+								WHERE productId=$key;
+							");
 							
-							if ($items->num_rows > 0) {
+							if ($items->num_rows > 0 && $value > 0) {
 								while ($row = $items->fetch_assoc()) {
 									$sum = $sum + $value*$row['price'];
-									if ($value > 0) {
-										echo "<div class='cart-confirmation-item'>
-													<span class='cart-item-desc'>".$value."x $row[productName]</span>
-													<span class='cart-item-cost'>$".number_format($value*$row['price'], 2)."</span>
-												</div>
-												<hr>";
-									}
-									
+									echo 
+									"<div class='cart-confirmation-item'>
+										<form action='./Helpers/removeFromCart.php' method='POST' class='remove-form'>
+											<input type='submit' value='-' class='remove-item'>
+											<input type='hidden' name='productId' value='$row[productId]'>
+											<input type='hidden' name='url' value='purchaseConfirmation.php'>
+										</form>
+										<span class='cart-item-desc'>".$value."x $row[productName]</span>
+										<span class='cart-item-cost'>$".number_format($value*$row['price'], 2)."</span>
+									</div>
+									<hr>";
 								}
 							}
 						}
 					}
-					
+					$sum = 0.18;
+					$_SESSION["sum"] = $sum;
 				?>
-
 			</div>
 			<hr>
 			<div class="cart-confirmation-footer">
 				<span class="cart-total">
 					<label>Total: </label><?php echo "$".number_format($sum, 2);?>
 				</span>
-				<?php
-					$_SESSION["sum"] = $sum;
-
-					include("./Helpers/connectToDatabase.php");
-					if (isset($_SESSION["userId"])) {
-						$pending_purchase_query = mysqli_query($con,"SELECT *
-						FROM transactionLog
-						WHERE transactionEnd = '3001-01-01'
-						AND transactionBy = $_SESSION[userId];");
-						if ($pending_purchase_query->num_rows == 0) {
-							mysqli_query($con,"INSERT INTO transactionLog(
-								transactionDate,
-								transactionStart,
-								transactionEnd,
-								transactionBy,
-								transactionAmount,
-								bitcoinSource,
-								bitcoinTarget
-							)
-							VALUES (
-								Now(),
-								Now(),
-								'3001-01-01',
-								'$_SESSION[username]',
-								$sum,
-								'$_SESSION[email]',
-								'crunchbag.uva@gmail.com'
-							);");
-						}
-					} else {
-						$id = session_id();
-						$pending_purchase_query = mysqli_query($con,"SELECT *
-						FROM transactionLog
-						WHERE transactionEnd = '3001-01-01'
-						AND transactionBy = '$id';");
-						if ($pending_purchase_query->num_rows == 0) {
-							mysqli_query($con,"INSERT INTO transactionLog(
-								transactionDate,
-								transactionStart,
-								transactionEnd,
-								transactionBy,
-								transactionAmount,
-								bitcoinSource,
-								bitcoinTarget
-							)
-							VALUES (
-								Now(),
-								Now(),
-								'3001-01-01',
-								'$id',
-								$sum,
-								'$_SESSION[email]',
-								'crunchbag.uva@gmail.com'
-							);");
-						}
-						
-					}
-					
-					
-					include("./Helpers/disconnectFromDatabase.php");
-				?>
 				<form action="https://test.bitpay.com/checkout" method="post" >
-					
   					<input type="hidden" name="action" value="checkout" />
   					<input type="hidden" name="posData" value="" />
 					<input type="hidden" name="price" value="<?php echo $sum;?>" />
-  					<input type="hidden" name="data" value="gKARxl3aXk+XK4ebKD2NeCzVODQZETKfLsZcHDtlADhaLM3br+dkzveLlDJdGC0marp9lyhuBmZGFQESte1b/9R/LyMXktY2vg9DxezTXE7NcNlr32DomZYURUD/FQqkNI5Ejhfn+L7Gi1wddJSMM3k6Rb3MP+q1IMYeAUO2x1XNzcPx343AGoaBYrOt1alHjaym54UYJ7egzhXdHIJo6k8Ftlsoly57Ld6y/fEisfAvaIdNnG/2UN3ztFIl7iHbie/fVsx4w7APacICrL7pCg==" />
+					<input type="hidden" name="data" value="gKARxl3aXk+XK4ebKD2NeCzVODQZETKfLsZcHDtlADhaLM3br+dkzveLlDJdGC0marp9lyhuBmZGFQESte1b/9R/LyMXktY2vg9DxezTXE7VH5fG4+H39TUzps6SKSJzTru5vPRI/yc5z9B52lVi3XimIe8osoDcRPAqow/Kg0vYH8DIZ2GT1/wnxZQRWj3k03bMNURCrfRfW3Fex8W36Q==" />
   					<input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
 				</form>
 				

@@ -159,12 +159,28 @@
 					<td>Username:</td>
 					<td>
 						<input type="text" name="username" placeholder="Username">
+						<?php
+							if(isset($_GET["username"])) {
+								echo "<style>.error-dialogue-container {display: block !important;}</style>";
+								$text = "Username not found";
+								include("./Components/errorDialogue/errorDialogue.php");
+							}
+							
+						?>
 					</td>
 				</tr>
 				<tr class="entry">
 					<td>Password:</td>
 					<td>
-						<input type="password" name="password" placeholder="Password">
+						<input type="password" name="password" id="password" placeholder="Password">
+						<?php
+							if(isset($_GET["pw"])) {
+								echo "<style>.error-dialogue-container {display: block !important;}</style>";
+								$text = "Incorrect Password";
+								include("./Components/errorDialogue/errorDialogue.php");
+							}
+							
+						?>
 					</td>
 				</tr>
 				<tr >
@@ -179,5 +195,28 @@
 		<div class="footer">
 			<?php include("./Components/footer/footer.php");?>
 		</div>
+		<script>
+			
+			$.fn.toggleErrorMessage = function(condition) {
+				var state = $(this).siblings('#error-dialogue').css("display");
+				if (condition) {
+					if (state === "none") {
+						$(this).siblings('#error-dialogue').slideToggle();
+					}
+				}
+				else {
+					if (state !== "none") {
+						$(this).siblings('#error-dialogue').slideToggle();
+					}
+				}
+			}
+			$('input#password').change(function() {
+				var zip_pattern = /[^0-9]/;
+				var zip_strict_pattern = /^\d{5}(?:[-\s]\d{4})?$/;
+				var zip_test = zip_pattern.test($(this).val());
+				var zip_test_strict = !(zip_strict_pattern.test($(this).val()));
+				$(this).toggleErrorMessage(zip_test_strict);
+			});
+		</script>
    </body>
 </html>

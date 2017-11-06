@@ -58,9 +58,21 @@ a, h1, h2, h3, h4, h5, h6, span, text, p, div, input, textarea, td, tr,option, s
     font-family: 'Open Sans', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	line-height: 150%;
+}
+
 h1 {
 	font-size: 24pt;
-	font-weight: lighter;
+}
+h2 {
+	font-size: 20pt;
+}
+h3 {
+	font-size: 16pt;
+}
+h4 {
+	font-size: 12pt;
 }
 
 .max-inline {
@@ -105,4 +117,25 @@ input[type=text], input[type=date], input[type=password] {
 
 .italic {
 	font-style: italic;
+}
+
+input.remove-item {
+	color: white;
+	background-color: red;
+	line-height: 0pt;
+	border: none;
+	border-radius: 20pt;
+	width:15pt;
+	height:15pt;
+	cursor: pointer;
+}
+form.remove-form {
+	display:inline;
+	cursor: pointer;
+}
+
+.card {
+	background-color: white;
+	padding: 12pt;
+	box-shadow: 4pt 4pt 4pt grey;
 }

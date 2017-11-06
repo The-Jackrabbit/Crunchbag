@@ -23,7 +23,7 @@
 			
 			td.actionLinks {
             vertical-align: middle;
-            width: 100pt;
+            width: 140pt;
          }
          td.title {
             width: 170pt;
@@ -139,7 +139,7 @@
             <table id="header" class="header">
                <tr id="header-row">
                   <td id="title" class="title">
-                     <a href="./home.php">
+                     <a href="<?php echo $pkg["title_url"];?>">
 							<img style="width: 165pt" src="Assets/img/logo.png">
                  
 							</a>
