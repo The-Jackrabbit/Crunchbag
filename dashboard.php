@@ -213,6 +213,7 @@
 										$sum = 0;
 										include("./Helpers/connectToDatabase.php");
 										if (isset($_SESSION["cart"])) {
+											
 											foreach($_SESSION["cart"] as $key => $value) {
 												$items = mysqli_query($con,
 												"SELECT * FROM products
@@ -236,8 +237,17 @@
 														}
 														
 													}
-												}
+												} 
+											} 
+											if ($sum == 0) {
+												echo "<div>
+															<h3>I get it, you tryna save money - I respect that</h3>
+														</div>";
 											}
+										} else {
+											echo "<div>
+														<h3>I get it, you tryna save money - I respect that</h3>
+													</div>";
 										}
 										
 									?>
@@ -340,6 +350,10 @@
 										echo "</div></div>";
 										
 									}
+								} else {
+									echo "<div>
+											<h1>:' ( It's so empty</h1>
+											</div>";
 								}
 								include("./Helpers/disconnectFromDatabase.php");
 							?>

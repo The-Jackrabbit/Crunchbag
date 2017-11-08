@@ -16,7 +16,7 @@ $header_pkg = Array(
 if (isset($_SESSION['username'])) {
 	$header_pkg = Array(
 		"title" => "CrunchBag",
-		"title_url" => "dashboard.php",
+		"title_url" => "home.php",
 		"links" => Array(
 			"dashboard.php" => "Dash",
 			"purchase.php" => "Purchase"

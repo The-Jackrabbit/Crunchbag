@@ -12,44 +12,60 @@
 			}
 		}
 	}
-	$('form input').keyup(function() {
-		var input_id = $(this).attr("id");
+	$.fn.testInput = function() {
 		var num_pattern = /[0-9]/;
 		var sym_pattern = /[!@#$%^&*();:.\/]/;
 		var user_pattern = /^(?=.{5,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+/;//
-		
-		if (input_id === "first_name" || input_id === "last_name") {
-			var num_test = !num_pattern.test($(this).val());
-			var sym_test = !sym_pattern.test($(this).val());
-			$(this).toggleErrorMessage(!(num_test && sym_test));
-			
-		}
-	});
-	$('form input#email').change(function() {
 		var email_pattern = /[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.][a-zA-Z0-9]+/;
-		var email_test = email_pattern.test($(this).val());
-		$(this).toggleErrorMessage(!(email_test));	
-	});
-	$('form input#zip').change(function() {
 		var zip_pattern = /[^0-9]/;
 		var zip_strict_pattern = /^\d{5}(?:[-\s]\d{4})?$/;
-		var zip_test = zip_pattern.test($(this).val());
-		var zip_test_strict = !(zip_strict_pattern.test($(this).val()));
-		$(this).toggleErrorMessage(zip_test_strict);
-	});
-	$('form input#address').change(function() {
 		var address_pattern = /^[a-zA-Z0-9\s,.'-]*$/;
-		var address_test = address_pattern.test($(this).val());
-		$(this).toggleErrorMessage(!address_test);
-	});
-	$('form input#username').change(function() {
-		var user_pattern = /^(?=.{5,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+/;//
-		
-		var user_test = user_pattern.test($(this).val());
-		$(this).toggleErrorMessage(!user_test);
+		var city_pattern = /^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$/;
+
+		if ($(this).attr("id") === "first_name" ||  $(this).attr("id") === "last_name") {
+			var num_test = !num_pattern.test($(this).val());
+			var sym_test = !sym_pattern.test($(this).val());
+			return !(num_test && sym_test);
+		}
+		else if ($(this).attr("id") === "email") {
+			var email_test = email_pattern.test($(this).val());
+			return !(email_test);
+		}
+		else if ($(this).attr("id") === "zip") {
+			var zip_test = zip_pattern.test($(this).val());
+			var zip_test_strict = !(zip_strict_pattern.test($(this).val()));
+			return zip_test_strict;
+		}
+		else if ($(this).attr("id") === "address") {
+			var address_test = address_pattern.test($(this).val());
+			return !address_test;
+		}
+		else if ($(this).attr("id") === "username") {
+			var user_test = user_pattern.test($(this).val());
+			return !user_test;
+		}
+		else if ($(this).attr("id") === "city") {
+			var city_test = city_pattern.test($(this).val());
+			return !city_test;
+		}
+		return false;
+	}
+
+	$.fn.finalTest = function() {
+		var result = false;
+		$('form input').each(function() {
+			console.log($(this).testInput());
+			result = result || $(this).testInput();
+		})
+		console.log(result);
+		return result;
+	}
+	$('form input').change(function() {
+		console.log($(this).testInput());
+		$(this).toggleErrorMessage($(this).testInput());	
 	});
 
-	$("form#password-change").submit(function() {
+	$("form").submit(function() {
 		// MATCHING PASSWORDS
 		var password = $('#password').val();
 		var confirmedPassword = $('#password-confirmation').val();
@@ -58,11 +74,7 @@
 			
 			return false;
 		}
-		
-	});
-	$('form input#city').change(function() {
-		var city_pattern = /^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$/;
-		var city_test = city_pattern.test($(this).val());
-		$(this).toggleErrorMessage(!city_test);
+		console.log("final result: " + !$(this).finalTest());
+		return !$(this).finalTest();
 	});
 </script>

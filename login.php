@@ -162,7 +162,7 @@
 						<?php
 							if(isset($_GET["username"])) {
 								echo "<style>.error-dialogue-container {display: block !important;}</style>";
-								$text = "Username not found";
+								$text = "Username/Email not found";
 								include("./Components/errorDialogue/errorDialogue.php");
 							}
 							

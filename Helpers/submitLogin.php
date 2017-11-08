@@ -54,4 +54,5 @@
 		header("Location: ../login.php?username=0"); /* Redirect browser */
 		
 	}
+	include("disconnectFromDatabase.php");
 ?>

@@ -39,7 +39,9 @@
 			if ($username_availability_query->num_rows == 0) {
 				$update_username_query = mysqli_query($con, "	
 					UPDATE users
-					SET username = '$_POST[username]'
+					SET username = '$_POST[username]',
+					firstName = '$_POST[firstName]',
+					lastName = '$_POST[lastName]'
 					WHERE userId=$_SESSION[userId];
 				");
 			} else {
@@ -50,7 +52,9 @@
 			if ($email_availability_query->num_rows == 0) {
 				$update_email_query = mysqli_query($con, "	
 					UPDATE users
-					SET email = '$_POST[email]'
+					SET email = '$_POST[email]',
+					firstName = '$_POST[firstName]',
+					lastName = '$_POST[lastName]'
 					WHERE userId=$_SESSION[userId];
 				");
 			} else {
@@ -105,6 +109,7 @@
 
 		}
 	}
+	include("./updateSessionInfo.php");
 	include("disconnectFromDatabase.php"); 
 
 ?>

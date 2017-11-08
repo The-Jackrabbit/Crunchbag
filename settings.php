@@ -1,6 +1,9 @@
 <?php session_start();?>
 <?php 
 	include("./Helpers/sessionVariables.php"); 
+	if (!isset($_SESSION["userId"])) {
+		header("Location: ./home.php");
+	}
 	include("./Helpers/getUserInfo.php");
 ?>
 <html lang="en">

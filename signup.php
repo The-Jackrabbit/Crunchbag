@@ -155,7 +155,7 @@
 		<div class="banner-padding"></div>
 		<div class="max-inline">
 			<div class= "signup-card">
-			<form action="./Helpers/submitSignup.php" method="POST" id='signup-form'>
+			<form action="./Helpers/submitSignup.php" method="POST" id='password-change'>
 				<table class="signup-form">
 					<tr class="entry">
 						<td>First Name:</td>

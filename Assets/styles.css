@@ -121,7 +121,7 @@ input[type=text], input[type=date], input[type=password] {
 
 input.remove-item {
 	color: white;
-	background-color: red;
+	background-color: rgb(150, 0, 0);
 	line-height: 0pt;
 	border: none;
 	border-radius: 20pt;
